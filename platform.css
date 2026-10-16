@@ -1,0 +1,70 @@
+/* The fifth adventure: a bright, architectural playground. */
+body[data-page="fuel"] { background: #faf6ff; color: #30203f; }
+#fuel { background: radial-gradient(ellipse at 95% 7%, #caf6e755, transparent 40%), radial-gradient(ellipse at 0 60%, #ffcfea55, transparent 44%); }
+#fuel .page-top h1 { color: #30203f; }
+#fuel .page-top p { max-width: 640px; color: #685578; }
+.fuel-badge { padding: 17px 21px; background: #e3f9ed; border: 2px solid #443052; box-shadow: 4px 4px #d6b5ee; font: 12px/1.8 monospace; transform: rotate(3deg); }
+.fuel-layout { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 28px; align-items: start; }
+.fuel-shell { border: 2px solid #4b355d; border-radius: 16px; box-shadow: 6px 6px #d6b6ee; overflow: hidden; background: #fffafc; }
+.fuel-shell .game-top { color: #503860; background: #f2e5fc; border-bottom: 2px solid #4b355d; flex-wrap: wrap; gap: 8px; }
+.fuel-shell .game-top > span { font-size: 11px; letter-spacing: .06em; }
+.fuel-shell .game-top > div { flex-wrap: wrap; gap: 12px; font-size: 12px; }
+.fuel-shell .game-top button { color: #503860; border: 1px solid #c7a6db; }
+.fuel-stage { position: relative; background: #ffe5f6; }
+#platform-canvas { width: 100%; height: auto; aspect-ratio: 5 / 3; max-height: none; }
+.fuel-overlay { position: absolute; inset: 0; padding: clamp(16px, 3vw, 36px); background: linear-gradient(105deg, #fff9f8ee, #f8e6ffdd 65%, #d6f9ecbb); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; overflow: auto; gap: 12px; }
+.fuel-overlay[hidden] { display: none; }
+.fuel-overlay h2 { font-size: clamp(28px, 4vw, 50px); line-height: 1; letter-spacing: -.04em; margin: 0; color: #52305f; }
+.fuel-overlay p { margin: 0; max-width: 510px; font-size: 15px; line-height: 1.5; color: #695076; }
+.fuel-overlay small { font: 11px/1.6 monospace; color: #725f7e; }
+.fuel-overlay .primary { background: #9e6fce; color: #fff; border: 2px solid #503063; box-shadow: 3px 3px #f5b8db; min-height: 45px; }
+.fuel-shell .game-bottom { align-items: center; background: #fffafd; border-top: 2px solid #4b355d; gap: 12px; padding: 14px; }
+#platform-message { font-size: 13px; line-height: 1.5; color: #6b547a; flex: 1; }
+.fuel-shell .game-bottom button { color: #644d78; border-color: #d9c6e4; }
+.fuel-controls { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 12px 16px 17px; background: #f8efff; }
+.fuel-controls > div { display: flex; gap: 9px; }
+.fuel-controls button { min-height: 45px; min-width: 46px; padding: 8px 14px; color: #493158; background: #fff; border: 2px solid #6d4e82; border-radius: 8px; box-shadow: 0 3px #bd99d0; touch-action: none; font-weight: 700; }
+.fuel-controls button:active { transform: translateY(2px); box-shadow: 0 1px #bd99d0; }
+#platform-jump { background: #fbd5e8; }
+#platform-build { background: #e8d5ff; }
+#platform-tree { background: #d4f6e8; }
+.fuel-controls kbd { font: 10px monospace; border: 1px solid #79598c; padding: 2px 4px; margin-left: 4px; border-radius: 3px; opacity: .7; }
+.fuel-guide { background: #fff9ff; border: 2px solid #b594cc; border-radius: 12px; padding: 20px; box-shadow: 4px 4px #efdbf8; }
+.fuel-guide h2 { margin: 12px 0 20px; font-size: 23px; line-height: 1.2; letter-spacing: -.03em; }
+.fuel-level { display: flex; gap: 10px; text-align: left; align-items: center; width: 100%; margin: 8px 0; padding: 9px; background: #f5edfb; border: 1px solid #e3d4ee; border-radius: 7px; color: #513564; }
+.fuel-level > span:first-child { font: bold 13px monospace; color: #8b649e; background: #fff; padding: 7px; border-radius: 5px; }
+.fuel-level strong { display: block; font-size: 12px; line-height: 1.4; }
+.fuel-level small { display: block; font-size: 10px; line-height: 1.5; color: #867190; }
+.fuel-level.selected { border: 2px solid #8658ae; background: #ead9ff; }
+.fuel-level.completed > span:first-child { color: #278167; background: #d2f3e4; }
+.fuel-goals { font-size: 12px; line-height: 1.6; color: #705581; background: #ffe5f1; border-radius: 6px; padding: 10px; }
+.fuel-keys { margin-bottom: 0; font: 11px/1.8 monospace; color: #8b7295; }
+.fuel-how { margin: 40px 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.fuel-how article { background: #fffafc; border: 1px solid #ddc9e8; border-bottom: 4px solid #d4b3e9; border-radius: 10px; padding: 20px; }
+.fuel-how article:nth-child(2) { background: #f3eaff; }
+.fuel-how article:nth-child(3) { background: #e7faf0; }
+.fuel-how article:nth-child(4) { background: #fff0f6; }
+.fuel-how article > span { font-size: 29px; color: #9e72ba; }
+.fuel-how h3 { font-size: 17px; margin: 12px 0; }
+.fuel-how p { font-size: 13px; line-height: 1.65; margin: 0; color: #7b637f; }
+.fuel-story { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr); gap: 40px; padding: 38px; border: 2px solid #cab2d8; border-radius: 18px; background: #fffafc; }
+.fuel-story h2 { font-size: clamp(24px, 3vw, 36px); line-height: 1.15; margin: 15px 0; letter-spacing: -.035em; }
+.fuel-story p { color: #796180; font-size: 15px; line-height: 1.75; }
+.fuel-story a { display: inline-block; margin-top: 12px; color: #8b59ad; font-weight: 700; }
+.fuel-story-card { text-align: center; padding: 25px; border-radius: 12px; background: linear-gradient(140deg, #f9dbee, #ece0ff, #d8f5e8); }
+.fuel-story-card img { height: 110px; max-width: 100%; object-fit: contain; image-rendering: pixelated; }
+.fuel-story-card h3 { font-size: 21px; }
+.fuel-story-card p { font-size: 13px; }
+#fuel :is(button, a, canvas):focus-visible { outline: 3px solid #b253a9; outline-offset: 4px; }
+.poster-row { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+#hero-install { cursor: pointer; }
+#install-help { max-width: 600px; color: #40304e; border: 2px solid #a27cba; border-radius: 16px; background: #fff9fc; box-shadow: 6px 6px #ad7fbd55; }
+#install-help::backdrop { background: #19101bc9; backdrop-filter: blur(5px); }
+#install-help-message { line-height: 1.6; color: #75557f; }
+.install-steps { padding-left: 22px; font-size: 14px; line-height: 1.6; }
+.install-steps li { padding-left: 6px; margin-bottom: 15px; }
+.install-offline { padding: 15px; font-size: 13px; line-height: 1.6; border-radius: 8px; background: #e0f7ec; color: #467763; }
+@media (max-width: 1100px) { .fuel-layout { grid-template-columns: minmax(0, 1fr) 230px; gap: 18px; } .fuel-guide { padding: 15px; } .fuel-overlay { gap: 8px; } .fuel-overlay p { font-size: 13px; } .fuel-overlay small { font-size: 10px; } }
+@media (max-width: 1050px) { .poster-row { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 850px) { .fuel-layout { grid-template-columns: minmax(0, 1fr); } #platform-levels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; } .fuel-level { margin: 0; } .fuel-how { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fuel-story { gap: 25px; padding: 25px; } }
+@media (max-width: 600px) { .poster-row { grid-template-columns: repeat(2, minmax(0, 1fr)); } .fuel-badge { display: none; } #platform-canvas { min-height: 270px; object-fit: contain; } .fuel-overlay { justify-content: flex-start; padding: 20px 14px; } .fuel-overlay h2 { font-size: 30px; } .fuel-overlay .eyebrow { font-size: 9px; } .fuel-overlay small { max-width: 260px; } .fuel-controls { justify-content: center; padding: 12px; } .fuel-controls button { padding: 9px 15px; } .fuel-story { grid-template-columns: 1fr; padding: 22px; } .fuel-how { gap: 10px; margin: 28px 0; } .fuel-how article { padding: 15px; } .fuel-how h3 { font-size: 15px; } .fuel-how p { font-size: 12px; } .fuel-shell .game-top > span { width: 100%; } .fuel-shell .game-top > div { width: 100%; justify-content: space-between; gap: 4px; font-size: 11px; } .fuel-shell .game-bottom { flex-wrap: wrap; } .fuel-shell .game-bottom > span { min-width: 180px; } }

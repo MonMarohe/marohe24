@@ -1,0 +1,28 @@
+/* Chan Chan palette over the shared arcade shell and touch controls. */
+body[data-page="peru"] { background: #241a24; color: #fff0dd; }
+body[data-page="peru"] header { background: #241a24; }
+#peru .page-top .eyebrow { color: #e3b883; }
+#peru .combat-stamp { color: #edc18b; border-color: #b8826a; }
+#peru .game-shell { background: #3a2635; border-color: #ac866b; box-shadow: 0 8px 0 #49332d,0 20px 50px #0003; }
+#peru .game-top { background: linear-gradient(100deg,#332131,#583642); border-color: #d2aa824d; }
+#peru .game-top > span { color: #efd9aa; }
+#peru .canvas-wrap { background: #d6b890; }
+#peru .combat-overlay { background: linear-gradient(150deg,#382331ed,#54392ce8); }
+#peru .combat-overlay .eyebrow { color: #e9c68c; }
+#peru .combat-overlay p { color: #f0d7c5; }
+#peru .combat-overlay small { color: #e9cba5; }
+#peru .combat-guide > .eyebrow { color: #eccb91; }
+#peru .combat-guide p { color: #d7c1bb; }
+#peru .combat-guide article { border-color: #d2b7a83b; }
+#peru .combat-guide small { color: #c3a9a4; }
+#peru .combat-guide a { color: #ffb7d8; text-decoration: underline; text-underline-offset: 3px; }
+#peru .combat-controls { background: #30202e; }
+#peru .combat-controls small { color: #e6c7be; }
+#peru-stick { background: radial-gradient(circle,#5b4657,#332535); border-color: #e8b5d172; color: #e9c0d9; }
+#peru-stick span { background: linear-gradient(#dac2ed,#a489c5); border-color: #f6d9eb; box-shadow: 0 4px 0 #291c2f; }
+#peru .game-bottom { background: #332331; }
+#peru .game-bottom > span { color: #edd0b8; }
+#peru .game-bottom button { background: #5a3c4a; border-color: #9b7290; }
+@media(orientation:landscape) and (max-height:600px) {
+ body.mobile-game #peru .combat-controls { background: transparent; }
+}

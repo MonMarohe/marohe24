@@ -1,0 +1,31 @@
+/* MAROHE WORLD: site chrome, ordered home shelves and the Play bubble. */
+.brand{width:142px;flex-basis:142px;justify-content:center}
+.brand img{width:142px;max-height:84px;object-fit:contain}
+header{gap:22px}header nav{gap:24px}
+.hero-copy{max-width:590px}
+.hero-copy .hero-wordmark{font-family:'Space Grotesk',Arial,sans-serif;font-size:clamp(52px,6.8vw,88px);font-weight:800;margin-bottom:24px}
+#inicio .catalog-hero{margin-left:-4.5vw;margin-right:-4.5vw}
+.catalog-heading h2{font-family:'Space Grotesk',Arial,sans-serif}
+.hero-wordmark>span{display:block;color:#f4a3ce}
+.hero-copy .hero-welcome{max-width:490px;font-size:16px;line-height:1.55;font-weight:500;color:#e8ddea}
+.hero-actions{align-items:center;flex-wrap:wrap}
+.home-play-bubble{position:relative;isolation:isolate;display:inline-flex;align-items:center;gap:9px;padding:13px 27px;border:3px solid #1b1420;border-radius:32px;background:linear-gradient(115deg,#f68fc7 5%,#ffdd6d 43%,#8cdf8d 70%,#63dce4);box-shadow:0 5px 0 #141018,0 8px 20px #0003;font:900 29px/1 'Space Grotesk',Arial,sans-serif;color:#fff9f9;-webkit-text-stroke:1.2px #231a27;paint-order:stroke fill;letter-spacing:.01em;transform:rotate(-3deg);transition:transform .2s,box-shadow .2s}
+.home-play-bubble:before{content:"";position:absolute;left:14px;right:14px;top:6px;height:13px;border-radius:50%;background:#fff7;z-index:-1}
+.home-play-bubble span{font-size:22px;color:#2d1f36;-webkit-text-stroke:0}
+.home-play-bubble:hover,.home-play-bubble:focus-visible{transform:rotate(0) translateY(-2px);box-shadow:0 7px 0 #141018,0 12px 24px #0004}
+#inicio .home-shelf{margin:42px 0 55px}
+#inicio .home-strip{align-items:start}
+#inicio .home-strip>a{min-width:0;display:block}
+#inicio .home-strip p{color:#bfaec9;font-size:14px;line-height:1.5;margin-top:9px}
+#inicio .home-strip h3{font-size:22px;line-height:1.2}
+#inicio .home-blog .home-strip img{height:215px;object-fit:cover;border-radius:16px}
+#inicio .home-episodes .home-strip img{height:215px;object-fit:cover;object-position:center 37%;border-radius:16px}
+#inicio .home-blog .home-strip a{border:1px solid #ffffff20;border-radius:18px;background:#241b2d;overflow:hidden;padding-bottom:21px}
+#inicio .home-blog .home-strip a>span,#inicio .home-blog .home-strip a>h3,#inicio .home-blog .home-strip a>p{margin-left:20px;margin-right:20px}
+#inicio .home-blog .home-strip a:hover{border-color:#e9a0c6}
+#inicio .home-blog .home-empty-note{color:#bfaec9}
+.footer-brand img{display:block;width:110px;height:63px;object-fit:contain}
+.product-image>img[src$="lanyard-bolsa-marohe.jpg"]{object-fit:contain;background:#f6f5f4}
+@media(max-width:1100px){header nav{gap:17px}.header-note{display:none}}
+@media(max-width:700px){.brand{width:124px;flex-basis:124px}.brand img{width:124px;max-height:72px}header{gap:12px}header nav{gap:4px 17px}.hero-copy .hero-wordmark{font-size:56px}.hero-copy .hero-welcome{font-size:14px;max-width:330px}.home-play-bubble{font-size:25px;padding:12px 23px}.hero-actions{gap:12px}#inicio .home-shelf{margin:32px 0 40px}#inicio .home-blog .home-strip img,#inicio .home-episodes .home-strip img{height:185px}#inicio .home-strip h3{font-size:20px}.footer-brand img{width:100px;height:58px}}
+@media(prefers-reduced-motion:reduce){.home-play-bubble{transition:none}}

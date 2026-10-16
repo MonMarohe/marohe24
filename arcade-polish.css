@@ -1,0 +1,53 @@
+/* Bright arcade framing for the existing creative games. */
+body:is([data-page=juego],[data-page=city],[data-page=blocks],[data-page=match]){background:radial-gradient(circle at 9% 7%,#ffdcf078,transparent 35%),radial-gradient(circle at 93% 28%,#c2f3eb78,transparent 30%),#faf6fc}
+:is(#juego,#city,#blocks,#match) .page-top h1{color:#34233f;text-shadow:2px 2px 0 #efd2fa}
+:is(#juego,#city,#blocks,#match) .back-games{display:inline-flex;padding:8px 14px;border:1px solid #d6bae8;background:#f5e7fc;border-radius:99px;text-decoration:none;box-shadow:0 3px 0 #ddc7ea;font-weight:600}
+:is(#juego,#city,#blocks,#match) .game-shell,:is(#blocks,#match) .block-shell{border:2px solid #bfa1d6;border-radius:18px;overflow:hidden;box-shadow:0 7px 0 #ddc6ee,0 18px 35px #6641751c}
+:is(#juego,#city,#blocks,#match) .game-top{background:linear-gradient(100deg,#332440,#5c3b70);color:#f9eaff;border-bottom:1px solid #795389;padding:15px 18px;letter-spacing:.5px}
+:is(#juego,#city,#blocks,#match) .game-top button{border:1px solid #c6a0dc;background:#755385;color:#fff;box-shadow:0 2px 0 #24172e}
+:is(#juego,#city,#blocks,#match) .game-top button:hover{background:#9367a5}
+:is(#juego,#city,#blocks,#match) .game-bottom{background:#f4e8fb;color:#51405c;border-top:1px solid #d7bce7}
+:is(#juego,#city) :is(.touch-controls,.game-bottom) button,:is(#blocks,#match) .puzzle-controls button{border:1px solid #bfa0d2;box-shadow:0 3px 0 #b299c6;transition:transform .12s,background .12s}
+:is(#juego,#city) :is(.touch-controls,.game-bottom) button:active,:is(#blocks,#match) .puzzle-controls button:active{transform:translateY(2px);box-shadow:0 1px 0 #b299c6}
+:is(#juego,#city,#blocks,#match) .primary{box-shadow:0 4px 0 #715384;border:1px solid #b999d0;font-weight:700;transition:transform .12s}
+:is(#juego,#city,#blocks,#match) .primary:active{transform:translateY(2px);box-shadow:0 2px 0 #715384}
+:is(#juego,#city,#blocks,#match) :is(#game-overlay,.city-overlay,.puzzle-overlay){background-image:radial-gradient(circle at 30% 18%,#b984e22b,transparent 50%)}
+:is(#blocks,#match) .puzzle-overlay h2{font-size:clamp(25px,3.2vw,36px);letter-spacing:-1px}
+:is(#blocks,#match) .puzzle-overlay p{max-width:340px;line-height:1.65}
+:is(#juego,#city,#blocks,#match) .creative-mission-note{position:relative;padding:22px 24px;margin:20px 0 28px;border:2px solid #d3b6e3;border-radius:16px;background:linear-gradient(120deg,#fbe4f3,#eee4fb 62%,#e1f7f0);box-shadow:0 4px 0 #e4d0ed;max-width:100%;color:#503a60}
+:is(#juego,#city,#blocks,#match) .creative-mission-note h2,:is(#juego,#city,#blocks,#match) .creative-mission-note h3{font-family:'Space Grotesk',sans-serif;color:#3b284b;font-size:23px;margin:0 0 10px}
+:is(#juego,#city,#blocks,#match) .creative-mission-note p{font-size:14px;line-height:1.7;max-width:850px;margin-top:8px}
+:is(#juego,#city,#blocks,#match) .creative-mission-note strong{color:#69458a}
+:is(#juego,#city,#blocks,#match) .creative-mission-note ul{display:flex;gap:10px 22px;flex-wrap:wrap;padding-left:19px;margin-top:13px;font-size:13px;line-height:1.6}
+#city .flight-guide,#blocks .puzzle-guide,#match .puzzle-guide{border-top:3px solid #c6a2df}
+:is(#blocks,#match) .puzzle-stats>div{background:linear-gradient(145deg,#fff6fe,#ebdcf8);border:1px solid #c6a5db;box-shadow:0 3px 0 #e2ceeF}
+:is(#blocks,#match) .puzzle-stats strong{color:#6f4199;text-shadow:1px 1px 0 #fff}
+#match .match-stage{background:linear-gradient(135deg,#59356f,#302344);border-top:1px solid #b287cb;border-bottom:1px solid #b287cb}
+#match .match-tile{background:linear-gradient(135deg,#69477a,#49305c);box-shadow:inset 0 2px 0 #ad83bb55,inset 0 -3px 0 #28193155;border-color:#a67ab5;border-radius:10px}
+#match .match-tile.selected{background:linear-gradient(135deg,#9a71b3,#755492);box-shadow:0 0 14px #ffd9927a,inset 0 0 0 1px #fff6c9}
+#match .match-tile.hinted{background:#796590;border-color:#90ffe3}
+#match .token{position:relative;filter:drop-shadow(0 3px 2px #1b0d2470)}
+#match .token.diamond{background:linear-gradient(145deg,#ffffffa6,transparent 35%);border-radius:10px;color:var(--gem);text-shadow:0 2px 0 #431d555c,0 0 10px var(--gem)}
+#match .token.diamond.pink{--gem:#ff9cde}#match .token.diamond.mint{--gem:#87ffe2}
+#match .token.diamond:after{content:'✧';position:absolute;top:-4px;right:-1px;color:#fff9e6;font-size:13px;text-shadow:0 0 5px #fff}
+#match .token.pearl{width:68%;height:68%;border-radius:50%;font-size:0;border:1px solid #e4c0f6;box-shadow:inset -4px -5px 0 #160b2433,0 3px 0 #2511325e}
+#match .token.pearl.black{background:radial-gradient(circle at 30% 24%,#8b6a9f 1%,#302337 32%,#17101b 70%)}
+#match .token.pearl.purple{background:radial-gradient(circle at 30% 24%,#f5d9ff 1%,#cf9cfa 35%,#9563c9 75%)}
+#match .token.pearl:after{content:'';position:absolute;left:22%;top:17%;width:16%;height:16%;border-radius:50%;background:#fff8fcdd}
+#match .token.bunny img{border:2px solid #f8cef2;box-shadow:0 2px 0 #342044}
+#match-progress{height:18px;border-radius:99px;overflow:hidden;accent-color:#9e65cc}
+#match-progress::-webkit-progress-bar{background:#e9d7f4;border-radius:99px}#match-progress::-webkit-progress-value{background:linear-gradient(90deg,#ba77dd,#71daca);border-radius:99px}
+@media(max-width:700px){:is(#juego,#city,#blocks,#match) .creative-mission-note{padding:17px 18px;margin:17px 0 22px}:is(#juego,#city,#blocks,#match) .creative-mission-note h2,:is(#juego,#city,#blocks,#match) .creative-mission-note h3{font-size:21px}:is(#juego,#city,#blocks,#match) .creative-mission-note p{font-size:13px}:is(#juego,#city,#blocks,#match) .game-top{padding:12px}#match .match-tile{border-radius:6px}#match .token.diamond:after{font-size:10px;top:-3px}:is(#blocks,#match) .puzzle-overlay h2{font-size:28px}}
+@media(prefers-reduced-motion:reduce){:is(#juego,#city,#blocks,#match) .primary,:is(#juego,#city) :is(.touch-controls,.game-bottom) button,:is(#blocks,#match) .puzzle-controls button{transition:none}}
+/* A more finished arcade frame shared by all five games. */
+:is(#fuel,#juego,#city,#blocks,#match) .game-shell{position:relative;border:1px solid #704d85;border-radius:20px;box-shadow:0 10px 0 #d8c3e5,0 24px 55px #321d3c25;background:#18131f}
+:is(#fuel,#juego,#city,#blocks,#match) .game-shell:before{content:'';position:absolute;z-index:4;inset:0;pointer-events:none;border-radius:19px;box-shadow:inset 0 1px #ffffff14,inset 0 0 40px #db94ed08}
+:is(#fuel,#juego,#city,#blocks,#match) .game-top{min-height:62px;background:linear-gradient(100deg,#1b1423,#382346 58%,#20172c);border-bottom:1px solid #aa83c548;color:#f9efff;letter-spacing:.12em}
+:is(#fuel,#juego,#city,#blocks,#match) .game-top button{width:38px;height:38px;border-radius:11px;background:#ffffff0b;border-color:#d3b0e677}
+:is(#fuel,#juego,#city,#blocks,#match) .canvas-wrap,:is(#fuel,#juego,#city,#blocks,#match) .match-stage{position:relative;isolation:isolate;background-color:#17121e;background-image:radial-gradient(ellipse at 50% 0,#55326044,transparent 60%),linear-gradient(#ffffff06 1px,transparent 1px),linear-gradient(90deg,#ffffff06 1px,transparent 1px);background-size:auto,36px 36px,36px 36px}
+:is(#fuel,#juego,#city,#blocks,#match) .game-shell canvas{position:relative;z-index:1;filter:drop-shadow(0 5px 14px #b657d319)}
+:is(#fuel,#juego,#city,#blocks,#match) .game-bottom{background:linear-gradient(90deg,#1b1524,#30213a);color:#e4d5ed;border-top:1px solid #8d69a53b}
+:is(#fuel,#juego,#city,#blocks,#match) .touch-controls button,:is(#blocks,#match) .puzzle-controls button{min-height:46px;border-radius:12px;background:linear-gradient(145deg,#fffaff,#f0e5f7);color:#382548}
+:is(#fuel,#juego,#city,#blocks,#match) .page-top .eyebrow{color:#77558c}
+:is(#fuel,#juego,#city,#blocks,#match) .creative-mission-note{box-shadow:0 8px 25px #68427816,0 4px 0 #e0cdea}
+@media(max-width:700px){:is(#fuel,#juego,#city,#blocks,#match) .game-shell{border-radius:15px}:is(#fuel,#juego,#city,#blocks,#match) .game-top{min-height:54px;padding:12px}:is(#fuel,#juego,#city,#blocks,#match) .canvas-wrap{background-size:auto,28px 28px,28px 28px}}

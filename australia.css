@@ -1,0 +1,88 @@
+/* Eight adventures, four covers per row. Keep the second row for Block and Escape. */
+body[data-page="inicio"] .poster-row { grid-template-columns: repeat(4,minmax(0,1fr)); }
+:is(body[data-page="australia"],body[data-page="peru"],body[data-page="usa"]) { background: #111a1c; color: #fff8f4; }
+:is(body[data-page="australia"],body[data-page="peru"],body[data-page="usa"]) header { background: #111a1c; border-color: #ffffff20; }
+:is(body[data-page="australia"],body[data-page="peru"],body[data-page="usa"]) :is(.header-note,footer) { color: #bbcec6; border-color: #ffffff20; }
+:is(#australia,#peru,#usa) { padding-bottom: 35px; }
+:is(#australia,#peru,#usa) > .back-games { color: #c6eede; }
+:is(#australia,#peru,#usa) .page-top { align-items: end; }
+:is(#australia,#peru,#usa) .page-top .eyebrow { color: #84e7be; }
+:is(#australia,#peru,#usa) h1 { font-weight: 700; letter-spacing: -2px; }
+:is(#australia,#peru,#usa) h1 em { color: #ff9bc6; }
+:is(#australia,#peru,#usa) .page-top p { color: #c5d4cd; max-width: 630px; font-size: 15px; }
+.combat-stamp { font: 700 11px/1.8 monospace; letter-spacing: 2px; padding: 12px 18px; border: 1px solid #86baad; color: #f2d78c; transform: rotate(4deg); }
+.combat-layout { display: grid; grid-template-columns: minmax(0,1fr) 235px; gap: 28px; align-items: start; }
+:is(#australia,#peru,#usa) .game-shell { border: 1px solid #4f8375; border-radius: 18px; box-shadow: 0 8px 0 #203b34,0 20px 50px #0003; background: #122a28; }
+:is(#australia,#peru,#usa) .game-top { background: linear-gradient(100deg,#18272c,#303348); border-bottom: 1px solid #77b4a33d; gap: 12px; min-height: 62px; }
+:is(#australia,#peru,#usa) .game-top > span { font: 700 11px monospace; color: #8ff2c6; letter-spacing: 1px; }
+:is(#australia,#peru,#usa) .game-top > div { flex: 1; justify-content: space-between; gap: 10px; letter-spacing: 0; }
+:is(#australia-health,#peru-health,#usa-health) { font-size: 17px; color: #ff91bc; white-space: nowrap; }
+:is(#australia-hearts,#peru-hearts,#usa-hearts) { color: #ffd579; white-space: nowrap; font-size: 12px; }
+:is(#australia,#peru,#usa) .game-top button { width: 38px; height: 38px; border: 1px solid #82b1a177; border-radius: 10px; }
+:is(#australia,#peru,#usa) .canvas-wrap { background: #173c33; overflow: hidden; }
+:is(#australia-canvas,#peru-canvas,#usa-canvas) { width: 100%; height: auto; max-height: none; aspect-ratio: 3/2; touch-action: none; cursor: crosshair; outline-offset: -4px; }
+.combat-overlay { position: absolute; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 13px; padding: 28px; text-align: center; background: linear-gradient(150deg,#0b2026ed,#193d33e8); overflow-y: auto; }
+.combat-overlay .eyebrow { color: #91e9bf; font-size: 10px; }
+.combat-overlay h2 { font: 700 clamp(28px,4.5vw,54px)/1.05 'Space Grotesk',sans-serif; color: #fff2de; margin: 0; letter-spacing: -1.5px; }
+.combat-overlay h2 span { color: #ff9fc8; }
+.combat-overlay p { color: #d0e3d6; font-size: 14px; max-width: 420px; }
+.combat-overlay .primary { margin: 6px 0 0; background: #ffa1c9; color: #222335; min-height: 50px; padding: 14px 24px; box-shadow: 0 4px 0 #a35c84; }
+.combat-overlay small { font-size: 11px; color: #9fd9c5; }
+.combat-medal { color: #ffd686; font-size: 38px; line-height: 1; }
+:is(#australia,#peru,#usa) .game-bottom { background: #192b2e; flex-wrap: wrap; min-height: 50px; }
+:is(#australia,#peru,#usa) .game-bottom > span { color: #c6e5d5; line-height: 1.5; font-size: 12px; }
+:is(#australia,#peru,#usa) .game-bottom button { color: #f4e7f2; background: #30344b; border-color: #756b96; }
+.combat-guide { padding: 15px 0; }
+.combat-guide > .eyebrow { color: #a8eccf; }
+.combat-guide h2 { font: 600 25px/1.2 'Space Grotesk',sans-serif; color: #fff0dc; margin: 16px 0; }
+.combat-guide p { color: #bdcec9; font-size: 13px; }
+.combat-guide article { margin: 22px 0; border-top: 1px solid #7ca29544; padding-top: 17px; }
+.combat-guide article b { display: block; color: #f9bdcf; font-size: 14px; margin-bottom: 5px; }
+.combat-guide article:last-of-type b { color: #ffd378; }
+.combat-guide small { display: block; margin-top: 20px; color: #98b8ac; font-size: 11px; line-height: 1.7; }
+.combat-controls { display: none; background: #16292b; touch-action: none; user-select: none; -webkit-user-select: none; }
+.combat-controls > div { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.combat-controls small { font: 700 9px monospace; color: #b5dace; letter-spacing: 1.2px; }
+:is(#australia-stick,#peru-stick,#usa-stick) { position: relative; width: 108px; height: 108px; border: 1px solid #92e6c06b; border-radius: 50%; background: radial-gradient(circle,#254c42,#172d2e); touch-action: none; box-shadow: inset 0 0 0 12px #a1eec505; color: #c0ead5; font-size: 21px; }
+:is(#australia-stick,#peru-stick,#usa-stick)::before { content: '↕'; position: absolute; top: 7px; left: 43px; opacity: .5; }
+:is(#australia-stick,#peru-stick,#usa-stick)::after { content: '↔'; position: absolute; left: 9px; top: 42px; opacity: .5; }
+:is(#australia-stick,#peru-stick,#usa-stick) span { display: grid; place-items: center; position: absolute; left: 32px; top: 32px; width: 44px; height: 44px; border: 2px solid #bbe8cd; border-radius: 50%; background: linear-gradient(#7ed9b9,#4c9f91); box-shadow: 0 4px 0 #091c26; pointer-events: none; color: #192d31; font-size: 24px; }
+:is(#australia-fire,#peru-fire,#usa-fire) { width: 98px; height: 98px; border-radius: 50%; border: 2px solid #ffcde4; color: #272135; background: radial-gradient(circle at 35% 25%,#ffd3e8,#ff84b7); box-shadow: 0 6px 0 #914d79,0 0 25px #f16a951a; touch-action: none; font: 700 13px monospace; }
+:is(#australia-fire,#peru-fire,#usa-fire) span { display: block; font-size: 30px; margin-bottom: 1px; }
+:is(#australia-fire,#peru-fire,#usa-fire):active, :is(#australia-fire,#peru-fire,#usa-fire)[aria-pressed="true"] { transform: translateY(3px); box-shadow: 0 3px 0 #914d79; }
+@media(max-width:700px) {
+ body[data-page="inicio"] .poster-row { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .combat-layout { grid-template-columns: minmax(0,1fr); }
+ .combat-stamp { display: none; }
+ .combat-guide { padding: 10px 0; }
+}
+body.mobile-game :is(#australia,#peru,#usa) { padding-bottom: env(safe-area-inset-bottom); }
+body.mobile-game :is(#australia,#peru,#usa) .combat-layout { flex: 1; display: flex; min-height: 0; margin: 0; }
+body.mobile-game :is(#australia,#peru,#usa) .combat-guide { display: none; }
+body.mobile-game :is(#australia,#peru,#usa) .game-shell { display: flex; flex: 1; flex-direction: column; width: 100%; min-height: 0; border: 0; border-radius: 0; box-shadow: none; }
+body.mobile-game :is(#australia,#peru,#usa) .game-top { min-height: 48px; flex: 0 0 auto; padding: 6px 12px; }
+body.mobile-game :is(#australia,#peru,#usa) .game-top > span { display: none; }
+body.mobile-game :is(#australia,#peru,#usa) .game-top > div { width: 100%; flex-wrap: nowrap; font-size: 10px; }
+body.mobile-game :is(#australia,#peru,#usa) .game-top button { flex-shrink: 0; width: 38px; height: 38px; }
+body.mobile-game :is(#australia,#peru,#usa) .game-top :is(#australia-health,#peru-health,#usa-health) { font-size: 14px; letter-spacing: 0; }
+body.mobile-game :is(#australia,#peru,#usa) .canvas-wrap { display: grid; flex: 1 1 0; min-height: 0; place-items: center; }
+body.mobile-game :is(#australia-canvas,#peru-canvas,#usa-canvas) { display: block; width: 100%; height: 100%; max-height: none; aspect-ratio: auto; object-fit: contain; }
+body.mobile-game :is(#australia,#peru,#usa) .combat-controls { display: flex; justify-content: space-between; align-items: center; padding: 9px 25px 12px; flex-shrink: 0; }
+body.mobile-game :is(#australia,#peru,#usa) .game-bottom { flex: 0 0 auto; min-height: 38px; padding: 3px 12px; }
+body.mobile-game :is(#australia,#peru,#usa) .game-bottom button { min-height: 32px; padding: 5px 9px; font-size: 10px; }
+body.mobile-game :is(#australia,#peru,#usa) .combat-overlay { padding: 16px; gap: 10px; }
+body.mobile-game :is(#australia,#peru,#usa) .combat-overlay h2 { font-size: 32px; }
+body.mobile-game :is(#australia,#peru,#usa) .combat-overlay p { font-size: 12px; max-width: 280px; }
+body.mobile-game :is(#australia,#peru,#usa) .combat-overlay small { display: none; }
+@media(orientation:landscape) and (max-height:600px) {
+ body.mobile-game :is(#australia,#peru,#usa) .game-top { min-height: 34px; padding: 2px 12px; }
+ body.mobile-game :is(#australia,#peru,#usa) .combat-controls { position: absolute; inset: auto 0 35px; background: transparent; pointer-events: none; padding: 8px 18px; z-index: 3; }
+ body.mobile-game :is(#australia,#peru,#usa) .combat-controls button { pointer-events: auto; opacity: .86; }
+ body.mobile-game :is(#australia-stick,#peru-stick,#usa-stick) { width: 94px; height: 94px; }
+ body.mobile-game :is(#australia-stick,#peru-stick,#usa-stick) span { left: 25px; top: 25px; }
+ body.mobile-game :is(#australia-fire,#peru-fire,#usa-fire) { width: 82px; height: 82px; }
+ body.mobile-game :is(#australia,#peru,#usa) .combat-controls small { display: none; }
+ body.mobile-game :is(#australia,#peru,#usa) .combat-overlay h2 { font-size: 25px; }
+ body.mobile-game :is(#australia,#peru,#usa) .combat-overlay p { display: none; }
+ body.mobile-game :is(#australia,#peru,#usa) .combat-medal { display: none; }
+}

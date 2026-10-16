@@ -1,0 +1,5 @@
+#match-board{overflow:hidden;isolation:isolate}
+#match-board .token{position:relative;z-index:2;transform-origin:center;will-change:transform,opacity}
+#match-board .match-tile.empty{background:#392247;border-color:#5c3c70}
+#match-board[aria-busy=true] .match-tile{cursor:wait}
+#match-board .match-tile:disabled{opacity:1}

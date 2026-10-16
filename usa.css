@@ -1,0 +1,24 @@
+/* Sunset colors for the canyon, using the shared arcade layout. */
+body[data-page="usa"],body[data-page="usa"] header { background: #251a2f; color: #fff2e6; }
+#usa .page-top .eyebrow { color: #ffbe8d; }
+#usa .combat-stamp { color: #fbc28c; border-color: #ab7c91; }
+#usa .game-shell { background: #36273d; border-color: #ae7983; box-shadow: 0 8px 0 #513441,0 20px 50px #0003; }
+#usa .game-top { background: linear-gradient(100deg,#38253f,#683b48); border-color: #e9b4864d; }
+#usa .game-top > span { color: #ffd89f; }
+#usa .canvas-wrap { background: #e2b78f; }
+#usa .combat-overlay { background: linear-gradient(150deg,#352241ee,#6c3e43e8); }
+#usa .combat-overlay .eyebrow { color: #ffd39e; }
+#usa .combat-overlay p { color: #f7dece; }
+#usa .combat-overlay small { color: #e5bfb3; }
+#usa .combat-guide > .eyebrow { color: #ffce96; }
+#usa .combat-guide p { color: #dac4d1; }
+#usa .combat-guide article { border-color: #dbb8993b; }
+#usa .combat-guide small { color: #c8acbf; }
+#usa .combat-controls,#usa .game-bottom { background: #322337; }
+#usa .combat-controls small,#usa .game-bottom > span { color: #f4cdbc; }
+#usa .game-bottom button { background: #634158; border-color: #a87c99; }
+#usa-stick { background: radial-gradient(circle,#72515b,#3c2a45); border-color: #f6bbd372; color: #ffdbc5; }
+#usa-stick span { background: linear-gradient(#ffd1a7,#d49c94); border-color: #ffdfce; box-shadow: 0 4px 0 #32213c; }
+@media(orientation:landscape) and (max-height:600px) {
+ body.mobile-game #usa .combat-controls { background: transparent; }
+}

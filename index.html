@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#16131c">
+<meta name="description" content="MAROHE WORLD: historias, juegos, arte, bobas, kits creativos y ruletas para descubrir tu próximo plan.">
+<title>MAROHE WORLD · Crea, juega y ríe</title>
+<link rel="icon" href="assets/marohe-icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="arcade.css">
+<link rel="stylesheet" href="universe.css">
+<link rel="stylesheet" href="boba-animation.css">
+<link rel="stylesheet" href="arcade-polish.css">
+<link rel="stylesheet" href="platform.css">
+<link rel="stylesheet" href="community-blog.css">
+<link rel="stylesheet" href="about-map.css">
+<link rel="stylesheet" href="blog-dashboard.css">
+<link rel="stylesheet" href="bunny-ar.css">
+<link id="city-map-css" rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="city-dashboard.css">
+<link rel="stylesheet" href="australia.css">
+<link rel="stylesheet" href="peru.css">
+<link rel="stylesheet" href="usa.css">
+<link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="mobile-games.css">
+<link rel="stylesheet" href="club.css">
+<link rel="stylesheet" href="club-belief.css">
+<link rel="stylesheet" href="play.css">
+<link rel="stylesheet" href="refresh.css">
+<link rel="stylesheet" href="marohe.css">
+<link rel="stylesheet" href="play-marohe.css">
+</head>
+<body data-page="inicio">
+<header>
+<a href="#inicio" class="brand" aria-label="MAROHE, inicio">
+<img src="assets/marohe-logo.png" alt="MAROHE">
+</a>
+<nav aria-label="Navegación principal">
+<a href="#inicio" data-page="inicio">Home</a>
+<a href="#agency" data-page="about">Estudio</a>
+<a href="#play" data-page="play">Play</a>
+<a href="#podcast" data-page="blog">Podcast</a>
+
+</nav>
+<button id="install" hidden>Instalar app</button>
+<span class="header-note">HECHO DE MAGIA. HECHO EN PERÚ.</span>
+</header>
+<main>
+<section id="inicio" class="page">
+<div class="catalog-hero">
+<img fetchpriority="high" decoding="async" src="assets/mate-lima-alpaca-hero.png" alt="Una alpaca tomando boba en una Lima colorida al atardecer">
+<div class="hero-copy">
+<span class="original-label">
+<b>M</b> BIENVENIDO A TU MUNDO CREATIVO</span>
+<h1 class="hero-wordmark">MAROHE <span>WORLD</span></h1>
+<p class="hero-welcome">Hola, soy Marohe. Artista, comunicadora creativa y arquitecta en formación.<br>En este espacio comparto mis creaciones, procesos y conversaciones sobre arte, social media y arquitectura!</p>
+<div class="hero-actions">
+<a class="home-play-bubble" href="#play/games" aria-label="Entrar a Play">PLAY <span aria-hidden="true">✦</span></a>
+<button id="hero-install" class="hero-alt" type="button">↓ Descargar PWA</button>
+</div>
+</div>
+</div>
+<section class="home-shelf home-blog" data-home-row="blog" aria-labelledby="home-blog-title"><div class="catalog-heading"><h2 id="home-blog-title">PODCAST · Historias que prenden ideas</h2><a href="#podcast">Ver podcast ↗</a></div><div id="home-blog-posts" class="home-strip" aria-live="polite"></div></section>
+<section class="home-shelf home-episodes" data-home-row="episodios" aria-labelledby="home-episodes-title"><div class="catalog-heading"><h2 id="home-episodes-title">EPISODIOS · Detrás de la chispa</h2><a href="#episodios">Ver episodios ↗</a></div><div class="home-strip">
+<a href="#episodios"><img loading="lazy" decoding="async" src="assets/episodio-lima.png" alt="Una chispa en Lima"><span>LIMA · EN PREPARACIÓN</span><h3>Una chispa en la ciudad</h3><p>Balcones, aventuras y un fuego por descubrir.</p></a>
+<a href="#episodios"><img loading="lazy" decoding="async" src="assets/australia-bunny.svg" alt="Un delfín rosado en Iquitos"><span>IQUITOS · PRÓXIMAMENTE</span><h3>El bosque que escucha</h3><p>Una futura historia entre ríos y hojas.</p></a>
+<a href="#episodios"><img loading="lazy" decoding="async" src="assets/usa-bunny.svg" alt="Una alpaca en las montañas"><span>ANDES · PRÓXIMAMENTE</span><h3>La luz entre montañas</h3><p>Una futura aventura para encender tu curiosidad.</p></a>
+</div></section>
+<section class="home-shelf home-projects" data-home-row="proyectos" aria-labelledby="home-projects-title"><div class="catalog-heading"><h2 id="home-projects-title">PORTAFOLIO · ESTUDIO</h2><a href="#agency/portfolio">Ver portafolio ↗</a></div><div class="home-strip">
+<a href="#agency/escenografias"><img loading="lazy" decoding="async" src="assets/projects/scene-01.jpg" alt="Escenografía teatral"><span>ESCENOGRAFÍAS</span><h3>Historias construidas para escena.</h3></a>
+<a href="#agency/comida"><img loading="lazy" decoding="async" src="assets/projects/food-boba-taro.jpg" alt="Boba MAROHE"><span>COMIDA</span><h3>Experiencias para beber y comer con color.</h3></a>
+<a href="#agency/ropa"><img loading="lazy" decoding="async" src="assets/projects/tuks-polo-cusco.jpg" alt="Polo de Cusco de MAROHE"><span>ROPA</span><h3>Diseño, ilustración y color para llevar.</h3></a>
+<a href="#agency/animaciones"><img loading="lazy" decoding="async" src="assets/projects/dr-happy-cover.png" alt="Dibujo animado de MAROHE"><span>ANIMACIONES</span><h3>Diversión y buenas noticias para elevar tu espíritu.</h3></a>
+</div></section>
+
+ </section>
+<section id="explorar" class="page ar-page" hidden>
+<div class="ar-intro"><a href="#inicio" class="ar-back">‹ MAROHE</a><span class="ar-kicker">UN JUEGO DE LANDMARKS Y ENCUENTROS</span><h1>BUNNY CITY <span>AR</span></h1><p class="ar-handwritten">La ciudad es tu tablero.</p><p>Descubre lugares, encuentra a Bunny y colecciona ideas. Los landmarks te cuentan la ciudad; los eventos te invitan a crearla con otras personas.</p></div>
+<div class="ar-tabs" role="group" aria-label="Secciones de Bunny City AR"><button type="button" data-ar-tab="mapa" aria-pressed="true">◎ Explorar Lima</button><button type="button" data-ar-tab="eventos" aria-pressed="false">✧ Eventos <span id="ar-event-count">0</span></button><button type="button" data-ar-tab="pasaporte" aria-pressed="false">♡ Mi Pasaporte <span id="ar-tab-count">0/3</span></button><button type="button" data-ar-tab="mundo" aria-pressed="false">✦ Mundo</button></div>
+<section id="ar-mapa-panel" class="ar-panel">
+<div class="ar-map-heading"><div><span class="ar-kicker">CAPÍTULO 01 · PERÚ 🇵🇪</span><h2 id="ar-map-heading-title">Landmarks, conejos y nuevas ideas.</h2></div><button id="ar-locate" class="ar-pink-button" type="button">◎ Estoy aquí</button></div>
+<p id="ar-location-status" class="ar-location-status" role="status">Toca “Estoy aquí” y permite el acceso a tu ubicación. La cámara se activa cerca del lugar; puedes ver a Bunny en vista previa desde casa.</p>
+<div class="ar-map-tools"><span>◎ Landmarks <span class="ar-event-legend">✧ Eventos</span></span><button id="ar-map-overview" type="button">Ver toda Lima ◎</button><button id="ar-map-wide" type="button" aria-pressed="false">⤢ Ampliar plano</button></div>
+<div id="ar-map-wrap" class="ar-map-wrap"><div id="ar-map" role="region" aria-label="Plano de landmarks y eventos en Lima"></div><div id="ar-map-fallback" class="ar-map-fallback"><p>Explora las calles de Lima con landmarks y eventos.<br>El mapa necesita conexión. Tu pasaporte sigue disponible sin conexión.</p><button id="ar-map-retry" type="button">Cargar mapa ↗</button></div></div>
+<p id="ar-map-status" class="ar-map-note" role="status">Plano de exploración de MAROHE · orientativo, sin rutas de navegación. Toca un conejo para conocer el lugar.</p>
+<div id="ar-landmarks" class="ar-landmarks" hidden></div>
+<div id="ar-map-events" class="ar-map-events"><div class="ar-passport-heading"><span class="ar-kicker">DESPUÉS DEL MAPA</span><h2>Eventos en Lima.</h2><p>Encuentros, talleres y paseos para seguir creando en la ciudad.</p></div><div id="ar-map-event-list" class="ar-landmarks ar-events-list"></div><div id="ar-map-events-empty" class="ar-events-empty"><img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Bunny preparando nuevos encuentros"><h3>Próximamente.</h3><p>Cuando se publique un evento, aparecerá aquí con su lugar, fecha y horario.</p></div></div>
+<p class="ar-visit-note">Detente en un espacio peatonal para usar la cámara. Respeta las zonas de acceso de cada lugar. Las distancias son en línea recta; los horarios y entradas de los recintos son independientes del juego.</p>
+</section>
+
+<section id="ar-eventos-panel" class="ar-panel" hidden><div class="ar-passport-heading"><span class="ar-kicker">UN SELLO. UN ENCUENTRO. UNA IDEA NUEVA.</span><h2>Eventos en la ciudad.</h2><p>Talleres, paseos y encuentros creativos. Visita su punto mientras el evento está activo para ganar un sello de Bunny.</p></div><div id="ar-event-list" class="ar-landmarks ar-events-list"></div><div id="ar-events-empty" class="ar-events-empty"><img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Bunny preparando nuevos encuentros"><h3>Estamos preparando nuevos encuentros.</h3><p>Cuando se publique un evento, verás aquí su lugar, fecha y horario. Mientras tanto, Lima tiene landmarks por descubrir.</p><button type="button" data-ar-tab="mapa">Explorar landmarks ↗</button></div><p class="ar-map-note">Horarios de eventos en hora de Lima (UTC−5). Los sellos no son entradas ni reservas.</p></section>
+<section id="ar-pasaporte-panel" class="ar-panel" hidden><div class="ar-passport-heading"><span class="ar-kicker">PASAPORTE DE CURIOSIDAD</span><h2>Mi Pasaporte <span>🇵🇪</span></h2><p>Recuerdos de los lugares que miraste de otra manera.</p><strong id="ar-passport-count">Lima · 0/3 conejos</strong><progress id="ar-passport-progress" value="0" max="3" aria-label="Conejos encontrados en Lima"></progress></div><div id="ar-passport-grid" class="ar-passport-grid"></div><div class="ar-block-bank"><h3>Tus bloques para crear</h3><div id="ar-blocks"></div></div><p class="ar-map-note">Tu pasaporte se guarda en este navegador y funciona sin conexión después de la primera visita. Conserva los datos de la app para mantener tus sellos.</p></section>
+<section id="ar-mundo-panel" class="ar-panel" hidden><div class="ar-passport-heading"><span class="ar-kicker">UNA CURIOSIDAD POR DESCUBRIR</span><h2>Lugares del Perú.</h2><p>Después de Lima, Bunny seguirá recorriendo paisajes, historias y formas de construir en todo el país.</p></div><div class="ar-world-grid"><article><span>🏔️</span><img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Silueta de Bunny"><h3>Machu Picchu</h3><p>Piedra, montaña y una ciudad que conversa con el paisaje.</p><small>⌑ Próximamente</small></article><article><span>🌋</span><img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Silueta de Bunny"><h3>Arequipa</h3><p>Sillar, luz y arquitectura de la Ciudad Blanca.</p><small>⌑ Próximamente</small></article><article><span>🌿</span><img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Silueta de Bunny"><h3>Iquitos</h3><p>Selva, ríos y nuevas maneras de orientarse.</p><small>⌑ Próximamente</small></article><article><span>🧱</span><img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Silueta de Bunny"><h3>Chan Chan</h3><p>Adobe, patios y memoria construida.</p><small>⌑ Próximamente</small></article></div></section>
+<section id="city-dashboard" class="city-dashboard" hidden aria-labelledby="city-dashboard-title"><div class="city-dashboard-head"><div><span class="ar-kicker">ADMIN · BUNNY CITY</span><h2 id="city-dashboard-title">Diseña el tablero de tu ciudad.</h2><p>Crea landmarks, publica eventos y elige qué idea comparte Bunny.</p></div><div><button id="city-admin-blog" type="button" hidden>Dashboard del podcast ↗</button><button id="city-admin-logout" type="button">Cerrar Admin ✕</button></div></div><p class="city-local-note">Versión local: los cambios se guardan en este navegador. Para publicar el mismo mapa y los eventos a todos hará falta conectar almacenamiento y autenticación de servidor.</p><div class="city-admin-grid"><form id="city-post-form" class="city-editor"><input id="city-post-id" type="hidden"><label>Tipo de punto<select id="city-post-type"><option value="landmark">Landmark · lugar de la ciudad</option><option value="event">Evento · encuentro con fecha</option></select></label><label>Nombre<input id="city-post-name" maxlength="100" required placeholder="Un lugar o un encuentro por descubrir"></label><label>Lugar / dirección<input id="city-post-area" maxlength="160" required placeholder="Distrito, espacio y dirección"></label><div class="city-coordinate-tools"><button id="city-pick-map" type="button" aria-pressed="false">Elegir punto en el plano ◎</button><button id="city-use-location" type="button">Usar mi ubicación</button></div><label>Latitud<input id="city-post-lat" type="number" step="any" min="-12.6" max="-11.65" required placeholder="−12.1200"></label><label>Longitud<input id="city-post-lng" type="number" step="any" min="-77.25" max="-76.65" required placeholder="−77.0300"></label><p id="city-coordinate-status" class="city-field-note" role="status">Puedes tocar el plano para colocar el punto. Revisa la ubicación antes de publicar.</p><div id="city-event-fields" class="city-event-fields" hidden><label>Empieza · hora de Lima<input id="city-post-start" type="datetime-local"></label><label>Termina · hora de Lima<input id="city-post-end" type="datetime-local"></label></div><label>Foto del post · opcional<input id="city-photo-upload" type="file" accept="image/jpeg,image/png,image/webp"></label><p id="city-photo-status" role="status">JPG, PNG o WebP · hasta 8 MB.</p><img loading="lazy" decoding="async" id="city-photo-preview" class="city-photo-preview" alt="Vista previa de la foto del post" hidden><button id="city-photo-remove" type="button" hidden>Quitar foto</button><label>Mensaje / misión de Bunny<textarea id="city-post-fact" rows="4" maxlength="700" required placeholder="¿Qué puede observar, aprender o crear quien visita este punto?"></textarea></label><label>Bloque de recompensa<select id="city-post-block"><option>Ideas</option><option>Encuentro</option><option>Sombra</option><option>Quincha</option><option>Luz</option></select></label><label>Enlace de información · opcional<input id="city-post-source" type="url" placeholder="https://..."></label><label class="city-publish"><input id="city-post-published" type="checkbox" checked> Publicar este punto</label><div class="city-editor-actions"><button id="city-post-save" type="submit">Guardar punto ✦</button><button id="city-post-cancel" type="button">Nuevo / limpiar</button></div><p id="city-admin-status" role="status"></p></form><div class="city-admin-entries"><div><h3>Tu tablero</h3><span id="city-admin-count"></span></div><div id="city-admin-list"></div></div></div></section>
+</section>
+<section id="about" class="page" hidden>
+<div class="founder-note">
+<img loading="lazy" decoding="async" src="assets/claudia-wonka.jpg" alt="Marohe, creadora de MAROHE" width="1241" height="832">
+<div><span class="eyebrow">MAROHE WORLD / PERÚ CREATIVO</span><h1>Soy Marohe.</h1>
+<p>Soy comunicadora creativa con mente de ingeniera. Siempre he hecho arte y cosas ingeniosas — desde chica estoy inventando, armando, dibujando y buscando cómo contar historias de otra forma. Mi chamba ha sido mezclar esos dos mundos: la lógica del ingeniero con el corazón del artista.</p></div>
+<span class="founder-stamp" aria-hidden="true">HECHO DE<br>CURIOSIDAD<br>✳</span>
+</div>
+<div class="about-mission wm-map">
+<div class="map-opening">
+<span class="map-label">LA AGENCIA / IDEAS QUE SE CONVIERTEN EN EXPERIENCIAS</span>
+<h2>Imaginamos ideas.<br>Creamos <em>posibilidades.</em></h2>
+<p>Somos una agencia creativa que conecta diseño, juego y curiosidad. Creamos kits para personas creativas, videojuegos, comida y ropa con personalidad, y experiencias para marcas, negocios y eventos. Convertimos ideas en cosas que puedes tocar, probar, jugar y compartir.</p>
+<div class="map-trail" aria-label="Tu recorrido"><span>01 · Descubre</span><span>02 · Mezcla</span><span>03 · Prueba</span></div>
+</div>
+
+<section class="map-mixer" aria-labelledby="mixer-heading">
+<div class="mixer-copy"><span class="map-label">MAROHE WORLD CREATIVE AGENCY</span><h2 id="mixer-heading">Arquitectura creativa<br><em>para tu negocio.</em></h2><p>Kits, videojuegos, comida creativa, ropa y experiencias: combinamos disciplinas para darle forma a tu marca, activar un evento o conectar con tu comunidad. Elige dos áreas y explora lo que podríamos crear juntos.</p><span class="mixer-note">Una idea puede convertirse en muchas experiencias.</span><a class="map-link agency-contact" href="https://www.instagram.com/MISSMAROHE" target="_blank" rel="noopener">Hablemos de tu proyecto ↗</a><a class="map-link" href="#agency/portfolio">Ver portafolio ↗</a></div>
+<div class="mixer-console">
+<div class="interest-buttons" role="group" aria-label="Elige dos intereses para combinar">
+<button type="button" data-interest="videojuegos" aria-pressed="false"><span aria-hidden="true">✦</span>Videojuegos</button>
+<button type="button" data-interest="pwa" aria-pressed="false"><span aria-hidden="true">▣</span>PWA</button>
+<button type="button" data-interest="arquitectura" aria-pressed="false"><span aria-hidden="true">⌂</span>Arquitectura creativa</button>
+<button type="button" data-interest="juegos" aria-pressed="false"><span aria-hidden="true">◇</span>Juegos creativos</button>
+<button type="button" data-interest="kits" aria-pressed="false"><span aria-hidden="true">▦</span>DIY kits</button><button type="button" data-interest="comida" aria-pressed="false"><span aria-hidden="true">●</span>Comida creativa</button>
+</div>
+<div class="mix-slots" aria-hidden="true"><span id="mix-slot-one">Tu interés</span><b>+</b><span id="mix-slot-two">Otra chispa</span></div>
+<p id="mix-status" class="mix-status" role="status">Elige dos intereses para comenzar.</p>
+<button id="mix-create" class="mix-create" type="button" disabled>Mezclar mis ideas ✦</button>
+<div id="mix-result" class="mix-result" hidden aria-live="polite"><span class="map-label">UNA POSIBILIDAD PARA TU MARCA</span><h3 id="mix-title"></h3><p id="mix-copy"></p><a id="mix-link" class="map-link" href="#inicio"></a></div>
+<button id="mix-reset" type="button" class="mix-reset">Empezar otra mezcla ↺</button>
+</div>
+</section>
+
+<section id="studio-portfolio" class="studio-portfolio" aria-labelledby="studio-portfolio-heading">
+  <div class="page-top projects-top"><div><span class="eyebrow">PORTAFOLIO / MAROHE STUDIO</span><h2 id="studio-portfolio-heading">Portafolio</h2><p>Universos visuales, escenas, objetos y personajes nacidos de la imaginación.</p></div></div>
+  <div id="projects-categories" class="projects-categories" aria-label="Proyectos"></div>
+  <div id="projects-gallery" class="projects-gallery" aria-live="polite" hidden></div>
+  <dialog id="projects-admin-dialog" class="projects-dialog">
+    <button id="projects-admin-close" class="dialog-close" type="button" aria-label="Cerrar">×</button>
+    <span class="eyebrow">DASHBOARD LOCAL</span><h2>Editar tu portafolio</h2><p>Los cambios y los archivos que subas se guardan en este navegador.</p>
+    <form id="projects-form"><input id="project-id" type="hidden"><label>Proyecto<select id="project-category" required><option value="escenografias">Escenografías</option><option value="comida">Comida</option><option value="ropa">Ropa</option><option value="animaciones">Animaciones</option></select></label><label>Título<input id="project-title" required maxlength="70"></label><label>Descripción<textarea id="project-description" required maxlength="220"></textarea></label><label>Foto o video nuevo <input id="project-media" type="file" accept="image/jpeg,image/png,image/webp,video/mp4"></label><p id="projects-form-message" role="status"></p><div class="projects-form-actions"><button class="primary" type="submit">Guardar proyecto</button><button id="project-new" type="button">Nuevo proyecto</button></div></form>
+    <div id="projects-admin-list" class="projects-admin-list"></div>
+    <button id="projects-admin-logout" type="button">Cerrar sesión de administradora</button>
+  </dialog>
+</section>
+
+<div class="map-finale"><img loading="lazy" decoding="async" src="assets/rabbit.png" alt="" width="65" height="67"><span class="map-label">HISTORIAS / IDEAS / CONVERSACIONES</span><h2>Marohe <em>On Air</em></h2><p>Historias de creatividad, de emprendimiento, filosofía, creatividad e ideas que salen mal y otras que se vuelven fascinantes.</p><a href="#podcast" class="primary">Conocer el podcast ↗</a></div>
+</div>
+</section>
+<section id="australia" class="page" hidden>
+<a class="back-games" href="#inicio">‹ Todos los juegos</a>
+<div class="page-top"><div><span class="eyebrow">01 / IQUITOS · SELVA PERUANA</span><h1>Welcome <em>Iquitos.</em></h1><p>Explora una selva inspirada en Iquitos. Cada sendero abre una nueva aventura.</p></div><div class="combat-stamp">MAROHE WORLD<br>EXPEDICIÓN / 01</div></div>
+<div class="combat-layout"><div class="game-shell combat-shell">
+<div class="game-top"><span>WELCOME IQUITOS</span><div><span id="australia-health" role="img" aria-label="Vida: 5 de 5">♥♥♥♥♥</span><span id="australia-hearts">♥ 0/6</span><span id="australia-wave">ZONA 1/3</span></div><button type="button" id="australia-pause" aria-label="Pausar Welcome Iquitos">Ⅱ</button></div>
+<div class="canvas-wrap"><canvas id="australia-canvas" width="960" height="640" tabindex="0" aria-label="Welcome Iquitos. Juega como un delfín rosado de pixel art. Muévete con flechas o WASD; espacio o J para lanzar algodón. Transforma serpientes en corazones de peluche y reúne corazones para conseguir la llama."></canvas><div id="australia-overlay" class="combat-overlay"></div></div>
+<div class="combat-controls" aria-label="Controles táctiles"><div><button type="button" id="australia-stick" aria-label="Palanca de movimiento. Arrastra en cualquier dirección."><span aria-hidden="true">✦</span></button><small>MOVER</small></div><div><button type="button" id="australia-fire" aria-label="Lanzar algodón. Mantén para lanzar continuamente." aria-pressed="false"><span aria-hidden="true">☁</span>LANZAR</button><small>ALGODONCITOS</small></div></div>
+<div class="game-bottom"><span id="australia-message" role="status">Tu expedición te espera.</span><button type="button" id="australia-sound" aria-pressed="false">♪ Sin sonido</button><button type="button" id="australia-restart">Reiniciar</button></div>
+</div><aside class="combat-guide"><span class="eyebrow">TU MISIÓN</span><h2>Entre ríos y hojas.</h2><p>Mate se interna en una selva imaginada desde Iquitos, ciudad de la Amazonía peruana. Sigue los senderos, reúne corazones y descubre qué hay después del siguiente árbol.</p><article><b>☁ Transforma las serpientes</b><p>Apunta con el mouse y lanza algodón con espacio o J: ¡puf! Cada serpiente se convierte en un corazón de peluche con ojos de corazón y se queda dormidita. En celular, el botón apunta a la más cercana.</p></article><article><b>♥ Recoge todos los corazones</b><p>Los corazones del mapa recuperan vida y completan tu recorrido.</p></article><article><b>♧ Encuentra a tus aliados</b><p>Los koalas y canguros son buenos. Acércate cuando te falte vida; su corazón verde te dice si pueden ayudarte.</p></article><article><b>🔥 Llega a la llama</b><p>Recoge todos los corazones y transforma las serpientes para encender la llama. Tócala para avanzar de zona. Completa las tres para ganar.</p></article><small>WASD o flechas: mover · Espacio / J: lanzar algodón · P / Escape: pausa.<br>Tu récord y la llama conseguida se guardan en este dispositivo. Puedes jugar sin conexión después de cargar la app.</small></aside></div>
+</section>
+<section id="peru" class="page" hidden>
+<a class="back-games" href="#inicio">‹ Todos los juegos</a>
+<div class="page-top"><div><span class="eyebrow">02 / PERÚ · CHAN CHAN ARCADE</span><h1>Welcome <em>Chan Chan.</em></h1><p>Recorre patios de adobe inspirados en Chan Chan, en la costa norte del Perú.</p></div><div class="combat-stamp">MAROHE WORLD<br>EXPEDICIÓN / 02</div></div>
+<div class="combat-layout"><div class="game-shell combat-shell">
+<div class="game-top"><span>WELCOME CHAN CHAN</span><div><span id="peru-health" role="img" aria-label="Vida: 5 de 5">♥♥♥♥♥</span><span id="peru-hearts">♥ 0/6</span><span id="peru-wave">ZONA 1/3</span></div><button type="button" id="peru-pause" aria-label="Pausar Welcome Chan Chan">Ⅱ</button></div>
+<div class="canvas-wrap"><canvas id="peru-canvas" width="960" height="640" tabindex="0" aria-label="Welcome Chan Chan. Juega como una alpaca de pixel art. Muévete con flechas o WASD; espacio o J para lanzar algodón. Transforma arañas en corazones de peluche y reúne corazones para conseguir la llama."></canvas><div id="peru-overlay" class="combat-overlay"></div></div>
+<div class="combat-controls" aria-label="Controles táctiles"><div><button type="button" id="peru-stick" aria-label="Palanca de movimiento. Arrastra en cualquier dirección."><span aria-hidden="true">✦</span></button><small>MOVER</small></div><div><button type="button" id="peru-fire" aria-label="Lanzar algodón. Mantén para lanzar continuamente." aria-pressed="false"><span aria-hidden="true">☁</span>LANZAR</button><small>ALGODONCITOS</small></div></div>
+<div class="game-bottom"><span id="peru-message" role="status">Tu expedición te espera.</span><button type="button" id="peru-sound" aria-pressed="false">♪ Sin sonido</button><button type="button" id="peru-restart">Reiniciar</button></div>
+</div><aside class="combat-guide"><span class="eyebrow">TU MISIÓN / CHAN CHAN</span><h2>Una ciudad de adobe.</h2><p>Mate encuentra un camino entre patios y muros inspirados en Chan Chan, la ciudad de adobe de la costa norte del Perú. Busca sus puertas y recorre tres zonas con ayuda de las llamas.</p><article><b>☁ Transforma las arañas</b><p>Lanza algodón esponjoso: ¡puf! Cada araña se convierte en un corazón de peluche con ojos de corazón y se queda dormidita. Usa los muros como refugio: el algodón no atraviesa el adobe, así que busca puertas o cambia de posición.</p></article><article><b>♥ Reúne los corazones</b><p>Explora las tres zonas. Los corazones del mapa recuperan vida y aparecen en el radar.</p></article><article><b>♧ Las llamas son tus aliadas</b><p>Acércate a una llama cuando te falte vida. Su corazón verde indica que puede ayudarte; después necesita descansar un momento.</p></article><article><b>🔥 Consigue el fuego final</b><p>Recoge todos los corazones y transforma las arañas para encender el fuego. Tócalo para entrar en la siguiente zona y completa las tres para ganar.</p></article><small>WASD / flechas: mover · Espacio / J: lanzar algodón · P: pausa.<br>En celular: palanca táctil y algodón con puntería asistida. Tu récord y tu fuego se guardan en este dispositivo.<br><a href="https://whc.unesco.org/en/list/366" target="_blank" rel="noopener">Conoce Chan Chan ↗</a></small></aside></div>
+</section>
+<section id="usa" class="page" hidden>
+<a class="back-games" href="#inicio">‹ Todos los juegos</a>
+<div class="page-top"><div><span class="eyebrow">03 / CUSCO · ANDES ARCADE</span><h1>Welcome <em>Cusco.</em></h1><p>Sigue a la alpaca por terrazas de piedra inspiradas en Machu Picchu, Cusco.</p></div><div class="combat-stamp">MAROHE WORLD<br>EXPEDICIÓN / 03</div></div>
+<div class="combat-layout"><div class="game-shell combat-shell">
+<div class="game-top"><span>WELCOME CUSCO</span><div><span id="usa-health" role="img" aria-label="Vida: 5 de 5">♥♥♥♥♥</span><span id="usa-hearts">♥ 0/6</span><span id="usa-wave">ZONA 1/3</span></div><button type="button" id="usa-pause" aria-label="Pausar Welcome Cusco">Ⅱ</button></div>
+<div class="canvas-wrap"><canvas id="usa-canvas" width="960" height="640" tabindex="0" aria-label="Welcome Cusco. Juega como una alpaca de pixel art. Muévete con flechas o WASD; espacio o J para lanzar algodón. Transforma águilas en corazones de peluche y reúne corazones para conseguir la llama."></canvas><div id="usa-overlay" class="combat-overlay"></div></div>
+<div class="combat-controls" aria-label="Controles táctiles"><div><button type="button" id="usa-stick" aria-label="Palanca de movimiento. Arrastra en cualquier dirección."><span aria-hidden="true">✦</span></button><small>MOVER</small></div><div><button type="button" id="usa-fire" aria-label="Lanzar algodón. Mantén para lanzar continuamente." aria-pressed="false"><span aria-hidden="true">☁</span>LANZAR</button><small>ALGODONCITOS</small></div></div>
+<div class="game-bottom"><span id="usa-message" role="status">Tu expedición te espera.</span><button type="button" id="usa-sound" aria-pressed="false">♪ Sin sonido</button><button type="button" id="usa-restart">Reiniciar</button></div>
+</div><aside class="combat-guide"><span class="eyebrow">TU MISIÓN / ANDES ARCADE</span><h2>Un camino entre piedras.</h2><p>Una alpaca llega a Cusco y sigue una ruta de terrazas de piedra inspiradas en Machu Picchu. Entre pasos estrechos y miradores, cada corazón marca una nueva parte de la aventura.</p><article><b>☁ Transforma las águilas</b><p>Las águilas sobrevuelan las rocas. Lanza algodón desde una buena posición: ¡puf! Se convierten en corazones de peluche con ojos de corazón y se quedan dormiditas. El algodón no atraviesa el relieve; muévete para encontrar tu ruta.</p></article><article><b>♥ Recoge los corazones</b><p>Los corazones del mapa recuperan vida. Mira el radar para encontrar los que quedan fuera de la cámara.</p></article><article><b>♧ Los osos son tus aliados</b><p>Acércate a un oso cuando te falte vida. Su corazón verde indica que puede ayudarte; después necesita descansar un momento.</p></article><article><b>🔥 Enciende tu llama</b><p>Recoge todos los corazones y transforma las águilas para activar el fuego. Tócalo para pasar de zona. Completa las tres para ganar.</p></article><small>WASD / flechas: mover · Espacio / J: lanzar algodón · P: pausa.<br>En celular: palanca táctil y algodón con puntería asistida. El récord y el fuego se guardan en este dispositivo.</small></aside></div>
+</section>
+<section id="fuel" class="page" hidden>
+  <a class="back-games" href="#inicio">‹ Todos los juegos</a>
+  <div class="page-top">
+<div>
+<span class="eyebrow">01 / LIMA · CALLES CON COLOR</span>
+<h1>Welcome <em>Lima.</em>
+<span class="spark">✳</span>
+</h1>
+<p>Explora una Lima de calles, balcones y letreros chicha. Salta, construye puentes y completa el recorrido con Mate.</p>
+</div>
+<span class="fuel-badge">7 BARRIOS<br>
+<b>UN FUEGO PROPIO 🔥</b>
+</span>
+</div>
+  <div class="fuel-layout">
+<div class="game-shell fuel-shell">
+<div class="game-top">
+<span>WELCOME LIMA / LA CIUDAD DE LAS MIL IDEAS</span>
+<div>
+<span id="platform-score">0 / 6 ✦</span>
+<span id="platform-built">0 / 2 puentes</span>
+<span id="platform-trees">0 / 2 refugios</span>
+<button id="platform-pause" type="button" aria-label="Pausar Welcome Lima">Ⅱ</button>
+</div>
+</div>
+<div class="canvas-wrap fuel-stage">
+<canvas id="platform-canvas" width="1000" height="600" tabindex="0" aria-label="Welcome Lima: flechas para moverte, espacio para saltar, B para construir puentes y T para plantar árboles.">
+</canvas>
+<div id="platform-overlay" class="fuel-overlay">
+</div>
+</div>
+<div class="game-bottom">
+<span id="platform-message" role="status">Tu primera chispa te espera.</span>
+<button id="platform-restart" type="button">Reiniciar barrio</button>
+</div>
+<div class="fuel-controls" aria-label="Controles de Welcome Lima">
+<div>
+<button id="platform-left" type="button" aria-label="Mover a la izquierda">←</button>
+<button id="platform-right" type="button" aria-label="Mover a la derecha">→</button>
+<button id="platform-jump" type="button">↑ Saltar</button>
+</div>
+<div>
+<button id="platform-build" type="button">▦ Construir <kbd>B</kbd>
+</button>
+<button id="platform-tree" type="button">♧ Plantar <kbd>T</kbd>
+</button>
+</div>
+</div>
+</div>
+<aside class="fuel-guide">
+<span class="eyebrow">TU MAPA CREATIVO</span>
+<h2>Siete barrios.<br>Mil maneras de crear.</h2>
+<div id="platform-levels">
+</div>
+<p id="platform-goals" class="fuel-goals">Para tomar el fuego: 6 chispas, 2 puentes y 2 árboles.</p>
+<p class="fuel-keys">← → / A D Mover · ↑ / Espacio Saltar<br>B Construir · T Plantar · P Pausar</p>
+</aside>
+</div>
+  <div class="fuel-how">
+<article>
+<span>↑</span>
+<h3>Salta el ruido</h3>
+<p>Las bombas rondan la ciudad. Salta sobre ellas o encuentra una ruta propia.</p>
+</article>
+<article>
+<span>▦</span>
+<h3>Construye posibilidades</h3>
+<p>Acércate a los puentes transparentes y coloca cubos para cruzar.</p>
+</article>
+<article>
+<span>♧</span>
+<h3>Planta tus límites</h3>
+<p>Los árboles marcados se convierten en refugios que calman las bombas cercanas.</p>
+</article>
+<article>
+<span>🔥</span>
+<h3>Recupera tu fuego</h3>
+<p>Reúne ideas y alcanza esa pasión que da combustible a tus próximos proyectos.</p>
+</article>
+</div>
+  <section class="fuel-story">
+<div>
+<span class="eyebrow">UN JUEGO PARA DESCUBRIR EL PERÚ</span>
+<h2>Cada calle guarda una historia.</h2>
+<p>Welcome Lima recorre una ciudad hecha de contrastes: color, movimiento, arquitectura y mar. Cada puente abre una ruta para mirar Lima con otros ojos; cada árbol protege un rincón donde volver a crear.</p>
+<p>Las <strong>bombas de ruido</strong> representan el ritmo acelerado de la ciudad. El <strong>fuego</strong> es la curiosidad que te hace seguir caminando. El juego te invita a ensayar rutas y descubrir cómo el paisaje peruano también puede inspirarte.</p>
+<a href="#about">Conoce a Claudia y el universo →</a>
+</div>
+<div class="fuel-story-card">
+<img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Bunny, tu compañero de aventuras">
+<h3>Tu obra sigue contigo.</h3>
+<p>Al caer o tocar una bomba, vuelves al último refugio y conservas chispas, puentes y árboles de esa partida. Puedes pausar cuando necesites. Los barrios completados se guardan y sus fuegos aparecen en Mi Jardín Interior.</p>
+</div>
+</section>
+</section>
+
+<section id="juego" class="page" hidden>
+<a class="back-games" href="#inicio">‹ Todos los juegos</a>
+<div class="page-top">
+<div>
+<span class="eyebrow">08 / UNA AVENTURA PARA CONSTRUIR</span>
+<h1>Escape <em>Mate.</em>
+<span class="spark">✳</span>
+</h1>
+<p>Un conejo. Cuatro mundos. Una ciudad que podemos transformar.</p>
+</div>
+<div class="mission-stamp">JUEGA<br>CREA<br>
+<strong>PERTENECE ♡</strong>
+</div>
+</div>
+<div class="creative-mission-note">
+<span class="eyebrow">PARA DESCUBRIR EL PERÚ</span>
+<h2>Un mapa para conocer el país</h2>
+<p>Cada chispa es una pista. Mueve cubos, abre rutas y recorre una geografía imaginada con adobe, costa, selva y montaña. Llegar al fuego representa encontrar una nueva historia para llevar contigo.</p>
+</div>
+<div class="game-layout">
+<aside class="worlds">
+<span class="eyebrow">TU VIAJE</span>
+<h2>Todo empieza<br>con una chispa.</h2>
+<div id="world-list">
+</div>
+<div class="small-story">
+<span>✦</span>
+<p>El fuego no se encuentra.<br>Se construye en comunidad.</p>
+</div>
+</aside>
+<div class="game-shell">
+<div class="game-top">
+<span id="world-name">01 / LIMA · EL DESIERTO</span>
+<div>
+<span id="lives">♡ ♡ ♡</span>
+<span id="score">0 / 0 ✦</span>
+<button id="pause" aria-label="Pausar juego">Ⅱ</button>
+</div>
+</div>
+<div class="canvas-wrap">
+<canvas id="game" width="900" height="620" tabindex="0" aria-label="Laberinto del conejo. Usa las flechas o los controles táctiles para moverte.">
+</canvas>
+<div id="game-overlay">
+<span class="eyebrow">CAPÍTULO 01 · EL DESIERTO</span>
+<h2>Encuentra tu<br>corazón.</h2>
+<p>Recoge todas las chispas y llega al fuego.<br>Empuja cubos. Planta refugios. Evita las bombas.</p>
+<button id="start" class="primary">Comenzar aventura <span>✦</span>
+</button>
+<small>Flechas o WASD para moverte</small>
+</div>
+</div>
+<div class="game-bottom">
+<span id="game-message" role="status">Tu primera aventura te espera.</span>
+<button id="tree">♧ Plantar árbol <span id="trees">3</span>
+</button>
+<button id="restart">Reiniciar</button>
+</div>
+<div class="touch-controls" aria-label="Controles de movimiento">
+<button data-move="up" aria-label="Arriba">↑</button>
+<div>
+<button data-move="left" aria-label="Izquierda">←</button>
+<button data-move="down" aria-label="Abajo">↓</button>
+<button data-move="right" aria-label="Derecha">→</button>
+</div>
+</div>
+</div>
+</div>
+<div class="how">
+<span>
+<b>01</b> Recoge las chispas</span>
+<span>
+<b>02</b> Mueve cubos y crea caminos</span>
+<span>
+<b>03</b> Planta árboles para protegerte</span>
+<span>
+<b>04</b> Despierta el fuego</span>
+</div>
+
+</section>
+<section id="city" class="page" hidden>
+<a class="back-games" href="#inicio">‹ Todos los juegos</a>
+<div class="page-top">
+<div>
+<span class="eyebrow">02 / AREQUIPA · VUELO & BOBA</span>
+<h1>Welcome <em>Arequipa.</em>
+<span class="spark">✳</span>
+</h1>
+<p>Vuela entre edificios de sillar inspirados en Arequipa, la Ciudad Blanca. Un toque, un impulso, una boba más.</p>
+</div>
+</div>
+<div class="creative-mission-note">
+<span class="eyebrow">PARA DESCUBRIR EL PERÚ</span>
+<h2>Encuentra tu propio ritmo</h2>
+<p>La boba negra representa ideas que te nutren y suma 10 puntos; la roja representa presión y termina el vuelo. Un toque, una pausa, otro intento: explora el equilibrio entre avanzar y cuidar tu energía.</p>
+</div>
+<div class="city-layout">
+<div class="game-shell city-shell">
+<div class="game-top">
+<span>WELCOME AREQUIPA / LA CIUDAD BLANCA</span>
+<div>
+<span id="city-score">0 PUNTOS</span>
+<span id="city-best">RÉCORD 0</span>
+<button id="city-pause" aria-label="Pausar Welcome Arequipa">Ⅱ</button>
+</div>
+</div>
+<div class="canvas-wrap city-canvas-wrap">
+<canvas id="city-canvas" width="900" height="620" tabindex="0" aria-label="Welcome Arequipa. Juega como una vicuña de pixel art. Pulsa espacio, flecha arriba o toca para flotar entre edificios.">
+</canvas>
+<div id="city-overlay" class="city-overlay">
+<span class="eyebrow">UN TOQUE PARA VOLAR</span>
+<h2>La ciudad<br>te espera.</h2>
+<p>Flota entre edificios. Boba negra: +10 puntos.<br>Boba roja y edificios: termina la partida.</p>
+<button id="city-start" class="primary">Vamos a volar ✦</button>
+<small>Espacio, flecha arriba o toca la pantalla</small>
+</div>
+</div>
+<div class="game-bottom">
+<span id="city-message" role="status">Recoge boba negra y descubre hasta dónde puedes llegar.</span>
+<button id="city-restart">Reiniciar</button>
+</div>
+</div>
+<aside class="flight-guide">
+<span class="eyebrow">TU GUÍA DE VUELO</span>
+<h2>Un poquito<br>más alto.</h2>
+<p>Cada toque impulsa a la vicuña. Sin tocar, la gravedad la hace bajar.</p>
+<div class="boba-rule">
+<span class="boba-dot good">
+</span>
+<div>
+<strong>Boba negra</strong>
+<p>+10 puntos. ¡Atrápala!</p>
+</div>
+</div>
+<div class="boba-rule">
+<span class="boba-dot bad">
+</span>
+<div>
+<strong>Boba roja</strong>
+<p>Evítala para seguir volando.</p>
+</div>
+</div>
+<div class="flight-tip">✦ Pasar entre edificios suma 1 punto.<br>Tu mejor vuelo se guarda aquí.</div>
+<button id="city-flap" class="primary">Impulsar a la vicuña ✦</button>
+<small>También puedes tocar el juego.</small>
+</aside>
+</div>
+</section>
+<section id="blocks" class="page" hidden>
+<a class="back-games" href="#inicio">‹ Todos los juegos</a>
+<div class="page-top">
+<div>
+<span class="eyebrow">07 / BLOQUES & CONSTRUCCIÓN</span>
+<h1>Block <em>Mate.</em>
+<span class="spark">✳</span>
+</h1>
+<p>Cada bloque tiene su lugar. Cada fila construye una nueva posibilidad.</p>
+</div>
+</div>
+<div class="creative-mission-note">
+<span class="eyebrow">PARA DESCUBRIR EL PERÚ</span>
+<h2>Hay espacio para todas tus disciplinas</h2>
+<p>Gira, prueba y reacomoda las piezas como si recorrieras un mapa de texturas, ciudades y paisajes del Perú. Completar una fila libera espacio para una nueva posibilidad. La siguiente pieza ayuda a pensar un paso por delante.</p>
+</div>
+<div class="puzzle-layout block-layout">
+<div class="game-shell block-shell">
+<div class="game-top">
+<span>BLOCK MATE / CONSTRUYE TU CIUDAD</span>
+<button id="block-pause" aria-label="Pausar Block Mate">Ⅱ</button>
+</div>
+<div class="block-stage">
+<canvas id="block-canvas" width="300" height="600" tabindex="0" aria-label="Bloques que caen. Flechas para mover y girar. Espacio para soltar.">
+</canvas>
+<div id="block-overlay" class="puzzle-overlay">
+</div>
+</div>
+<div class="puzzle-controls" aria-label="Controles de Block Mate">
+<button data-block="left" aria-label="Mover una casilla a la izquierda" title="Un toque: una casilla. Mantén para mover.">←</button>
+<button data-block="right" aria-label="Mover una casilla a la derecha" title="Un toque: una casilla. Mantén para mover.">→</button>
+<button data-block="rotate" aria-label="Girar pieza">↻</button>
+<button data-block="down" aria-label="Bajar pieza">↓</button>
+<button data-block="drop">Soltar</button>
+</div>
+</div>
+<aside class="puzzle-guide">
+<span class="eyebrow">TU PLANO DE CONSTRUCCIÓN</span>
+<div class="puzzle-stats">
+<div>
+<span>Puntos</span>
+<strong id="block-score">0</strong>
+</div>
+<div>
+<span>Líneas</span>
+<strong id="block-lines">0</strong>
+</div>
+<div>
+<span>Nivel</span>
+<strong id="block-level">1</strong>
+</div>
+<div>
+<span>Récord</span>
+<strong id="block-best">0</strong>
+</div>
+</div>
+<div class="next-piece">
+<span>Siguiente bloque</span>
+<canvas id="block-next" width="150" height="100" aria-label="Vista previa de la siguiente pieza">
+</canvas>
+</div>
+<p>Completa filas para liberar espacio. Cada 10 líneas sube el nivel y los bloques caen más rápido.</p>
+<p class="puzzle-keys">← → Mover · ↑ Girar · ↓ Bajar<br>Espacio: soltar · P: pausar</p>
+<button id="block-restart" class="primary">Nueva construcción</button>
+</aside>
+</div>
+</section>
+<section id="match" class="page" hidden>
+<a class="back-games" href="#inicio">‹ Todos los juegos</a>
+<div class="page-top">
+<div>
+<span class="eyebrow">06 / DIAMANTES, BOBA & CONEJOS</span>
+<h1>Boba <em>Mate.</em>
+<span class="spark">✳</span>
+</h1>
+<p>Intercambia dos fichas vecinas. Une tres o más y deja que la magia se encadene.</p>
+</div>
+</div>
+<div class="creative-mission-note">
+<span class="eyebrow">PARA DESCUBRIR EL PERÚ</span>
+<h2>Tu laboratorio de conexiones</h2>
+<p>Diamantes, bobas y conejos son ingredientes de una idea. Prueba combinaciones y observa cómo una conexión abre otra: las fichas caen y crean cascadas. Un intercambio que no combina se devuelve sin gastar un movimiento.</p>
+</div>
+<div class="puzzle-layout match-layout">
+<div class="game-shell match-shell">
+<div class="game-top">
+<span>BOBA MATE / COMBINA TU MAGIA</span>
+<button id="match-pause" aria-label="Pausar Boba Mate">Ⅱ</button>
+</div>
+<div class="match-stage">
+<div id="match-board" role="grid" aria-label="Tablero de combinaciones, 8 filas y 8 columnas">
+</div>
+<div id="match-overlay" class="puzzle-overlay">
+</div>
+</div>
+<div class="game-bottom">
+<span id="match-message" role="status">Diamantes, bobas y conejos esperan tu primera combinación.</span>
+<button id="match-hint">Una pista ✦</button>
+</div>
+</div>
+<aside class="puzzle-guide">
+<span class="eyebrow">TU RECETA DE MAGIA</span>
+<div class="puzzle-stats">
+<div>
+<span>Puntos</span>
+<strong id="match-score">0</strong>
+</div>
+<div>
+<span>Movimientos</span>
+<strong id="match-moves">25</strong>
+</div>
+<div>
+<span>Nivel</span>
+<strong id="match-level">1</strong>
+</div>
+<div>
+<span>Récord</span>
+<strong id="match-best">0</strong>
+</div>
+</div>
+<label class="target-label" for="match-progress">Meta: <span id="match-target">1200</span> puntos</label>
+<progress id="match-progress" max="1200" value="0">
+</progress>
+<div class="match-legend">
+<span>◆ Diamantes</span>
+<span>● Bobas</span>
+<span>
+<img loading="lazy" decoding="async" src="assets/rabbit.png" alt=""> Conejos</span>
+</div>
+<p>Cada ficha combinada suma 30 puntos. Las cascadas multiplican la puntuación. Los cambios sin combinación no gastan movimientos.</p>
+<button id="match-restart" class="primary">Volver a mezclar</button>
+<small>Toca dos fichas. Con teclado, usa flechas y Enter para elegir.</small>
+</aside>
+</div>
+</section>
+<section id="episodios" class="page" hidden>
+<div class="catalog-hero episode-hero">
+<img loading="lazy" decoding="async" src="assets/episodio-lima.png" alt="Bunny explorando una Lima mágica con acantilados, mar y balcones coloridos">
+<div class="hero-copy">
+<span class="original-label">
+<b>W</b> HISTORIAS DE BUNNY</span>
+<h1>BUNNY<br>
+<span>EN LIMA</span>
+</h1>
+<div class="hero-genres">
+<span>Temporada 01</span>
+<span>Aventura</span>
+<span>En preparación</span>
+</div>
+<p>Entre balcones, cubos y una chispa junto al mar, Bunny descubre que la ciudad también puede ser mágica.</p>
+<div class="hero-actions">
+<a id="youtube-link" class="hero-play" target="_blank" rel="noopener" href="https://www.youtube.com/@missmarohe">Visitar el canal</a>
+<button id="episode-info" class="hero-alt">Sobre el episodio</button>
+</div>
+</div>
+</div>
+<div class="catalog-heading">
+<h2>Temporada 01 · En busca del fuego</h2>
+<span>Primera aventura en preparación</span>
+</div>
+<div class="episode-catalog">
+<button id="episode-card" class="episode-card" aria-label="Leer sobre el episodio 1, Bunny en Lima">
+<div class="episode-cover">
+<img loading="lazy" decoding="async" src="assets/episodio-lima.png" alt="Portada del primer episodio en Lima">
+<span>EPISODIO 01</span>
+</div>
+<div class="episode-copy">
+<span>LIMA / EN PREPARACIÓN</span>
+<h3>Una chispa en la ciudad</h3>
+<p>Bunny recorre la ciudad y encuentra sus primeras aventuras.</p>
+</div>
+</button>
+<article class="episode-future">
+<span>PRÓXIMAS AVENTURAS</span>
+<h3>El bosque que escucha</h3>
+<p>Una futura historia en Iquitos: despertar el espíritu y aprender a cuidar.</p>
+<small>Concepto de episodio · En preparación</small>
+</article>
+<article class="episode-future">
+<span>PRÓXIMAS AVENTURAS</span>
+<h3>La luz entre montañas</h3>
+<p>Una futura historia entre el hielo de Puno y el aura de Cusco.</p>
+<small>Concepto de episodio · En preparación</small>
+</article>
+</div>
+<p id="youtube-empty" class="episode-status">El primer episodio está en preparación. Visita el canal para conocer las publicaciones disponibles.</p>
+</section>
+<section id="blog" class="page" hidden>
+<div class="blog-main-hero">
+<div>
+<span class="eyebrow">PODCAST · MAROHE WORLD</span>
+<h1>Historias para<br><em>encender tu creatividad.</em></h1>
+<p>Historias, arte, filosofía y creatividad para encender ideas y mirar el mundo con más curiosidad.</p>
+<div class="blog-hero-actions"><a href="#podcast" aria-label="El enlace al podcast estará disponible pronto">Escuchar el podcast · enlace pronto ↗</a></div>
+</div>
+<img loading="lazy" decoding="async" src="assets/rabbit.png" alt="Bunny leyendo y conectando nuevas ideas">
+</div>
+
+<section id="blog-dashboard" class="blog-dashboard" hidden aria-labelledby="blog-dashboard-title">
+<div class="dashboard-head"><div><span class="eyebrow">ACCESO ADMINISTRADOR</span><h2 id="blog-dashboard-title">Dashboard del podcast</h2><p>Conserva tus entradas, crea borradores y decide qué aparece para tus lectores.</p></div><div><button id="blog-city-dashboard" type="button">Bunny City · eventos y landmarks ↗</button><button id="blog-admin-logout" type="button">Cerrar panel ✕</button></div></div>
+<div id="blog-dashboard-note" class="dashboard-note">Comprobando el almacenamiento del podcast…</div>
+<div class="blog-storage-actions"><button id="blog-import-local" type="button" disabled>Importar entradas de este navegador</button><button id="blog-export-local" type="button">Descargar respaldo de mis entradas</button></div>
+<label class="blog-backup-label">O importa un respaldo de otra versión de la web<input id="blog-import-backup" type="file" accept="application/json,.json"></label>
+<div class="dashboard-grid">
+<form id="blog-post-form" class="post-editor">
+<input id="blog-post-id" type="hidden">
+<label>Título<input id="blog-post-title" maxlength="100" required placeholder="Una idea que merece crecer"></label>
+<label>Categoría<select id="blog-post-category"><option>Creatividad</option><option>Diseño</option><option>Amor propio</option><option>Recetas</option><option>Historias</option></select></label>
+<label>Imagen<select id="blog-post-cover"><option value="assets/about-block-bunny.jpg">Block Mate</option><option value="assets/build-world-kit.jpg">Construye tu mundo</option><option value="assets/episodio-lima.png">Bunny en Lima</option><option value="assets/clothing-crea.jpg">Perú · Cusco · Lima</option></select></label>
+<div class="blog-photo-field"><label>O sube tu propia foto<input id="blog-photo-upload" type="file" accept="image/jpeg,image/png,image/webp"></label><div class="blog-photo-preview"><img loading="lazy" decoding="async" id="blog-photo-preview" src="assets/about-block-bunny.jpg" alt="Vista previa de la portada"><button id="blog-photo-remove" type="button" hidden>Quitar foto</button></div><p id="blog-photo-status" role="status">JPG, PNG o WebP · hasta 8 MB. Se reduce automáticamente para guardarla en este dispositivo.</p></div>
+<label>Resumen<textarea id="blog-post-excerpt" rows="3" maxlength="240" required placeholder="Una invitación breve para abrir el artículo"></textarea></label>
+<label>Artículo<textarea id="blog-post-body" rows="10" maxlength="8000" required placeholder="Escribe aquí. Separa los párrafos con una línea en blanco."></textarea></label>
+<label class="publish-toggle"><input id="blog-post-published" type="checkbox" checked> Publicar esta entrada</label>
+<div class="post-editor-actions"><button class="primary" type="submit">Guardar publicación ✦</button><button id="blog-post-cancel" type="button">Limpiar</button></div>
+<p id="blog-admin-status" role="status"></p>
+</form>
+<div class="admin-posts"><div class="admin-posts-heading"><h3>Publicaciones</h3><span id="blog-admin-count"></span></div><div id="blog-admin-list"></div></div>
+</div>
+</section>
+
+<div class="blog-toolbar">
+<label><span>Buscar</span><input id="blog-search" type="search" placeholder="Ideas, recetas, creatividad…"></label>
+<label><span>Tema</span><select id="blog-category-filter"><option value="todos">Todos los temas</option><option>Creatividad</option><option>Diseño</option><option>Amor propio</option><option>Recetas</option><option>Historias</option></select></label>
+</div>
+<div class="blog-sync-bar"><p id="blog-sync-status" role="status">Actualizando el podcast…</p><button id="blog-refresh" type="button">Actualizar ↻</button></div>
+<div id="blog-posts" class="blog-post-grid" aria-live="polite"></div>
+<div id="blog-empty" class="blog-empty" hidden><span>◇</span><h2>No encontramos esa idea.</h2><p>Prueba otra palabra o vuelve a todos los temas.</p></div>
+
+</section>
+<section id="play" class="page play-page" hidden></section>
+</main>
+<footer>
+<a class="footer-brand" href="#inicio"><img src="assets/marohe-logo.png" alt="MAROHE">
+</a>
+<a class="footer-agency" href="#agency" data-page="about">Agency</a>
+<span>JUGAR. CREAR. REÍR.</span>
+<span>De Perú, con amor ♡</span>
+<div class="social-links" role="navigation" aria-label="Redes sociales de MAROHE">
+<a href="https://www.facebook.com/missmarohe" target="_blank" rel="noopener noreferrer" aria-label="Facebook de MAROHE"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 22v-8h3l.5-4H14V8c0-1.2.3-2 2-2h2V2.5A26 26 0 0 0 15 2c-3 0-5 1.8-5 5v3H7v4h3v8z"/></svg></a>
+<a href="https://www.instagram.com/MISSMAROHE" target="_blank" rel="noopener noreferrer" aria-label="Instagram de MAROHE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+<a href="https://www.youtube.com/@missmarohe" target="_blank" rel="noopener noreferrer" aria-label="YouTube de MAROHE"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 6 3-6 3z" fill="currentColor" stroke="none"/></svg></a>
+</div>
+<div class="footer-admin-links"><button id="blog-admin-open" class="footer-admin" type="button">Admin Podcast</button><button id="city-admin-open" class="footer-admin" type="button">Admin AR City</button><button id="projects-admin-open" class="footer-admin" type="button">Admin Proyectos</button></div>
+</footer>
+<dialog id="episode-dialog">
+<div class="dialog-head">
+<h2>Bunny en Lima</h2>
+<button id="episode-close" aria-label="Cerrar información del episodio">✕</button>
+</div>
+<img loading="lazy" decoding="async" class="episode-dialog-art" src="assets/episodio-lima.png" alt="Arte conceptual de la aventura de Bunny en Lima">
+<p>
+<strong>Episodio 01 · Una chispa en la ciudad</strong>
+</p>
+<p>Bunny llega a una Lima de balcones coloridos, caminos junto al mar y cubos por mover. Mientras busca el fuego, aprende a imaginar una ciudad más amable y a cuidar a quienes la comparten.</p>
+<p>En preparación. Esta es la portada conceptual; todavía no hay un video de este episodio conectado.</p>
+<a class="primary" href="https://www.youtube.com/@missmarohe" target="_blank" rel="noopener">Visitar el canal de Bunny</a>
+</dialog>
+<dialog id="ar-camera-dialog" class="ar-camera-dialog" aria-labelledby="ar-camera-title"><video id="ar-video" autoplay muted playsinline aria-label="Vista en directo de tu cámara"></video><div class="ar-camera-top"><div><span>BUNNY CITY AR</span><h2 id="ar-camera-title">Encuentra a Bunny</h2></div><button id="ar-camera-close" type="button" aria-label="Cerrar cámara">✕</button></div><div class="ar-camera-stage"><div id="ar-voxel-bunny" class="ar-voxel-bunny" role="img" aria-label="Conejo blanco de bloques en 3D saltando"></div><div class="ar-bunny-shadow"></div></div><div class="ar-camera-bottom"><div class="ar-speech"><span>UN MENSAJE DE BUNNY ♡</span><p id="ar-camera-fact"></p><a id="ar-camera-source" target="_blank" rel="noopener">Sobre este lugar ↗</a></div><p id="ar-camera-status" role="status">Abriendo cámara…</p><button id="ar-collect" class="ar-pink-button" type="button" disabled>Encontré a Bunny ♡</button><small>Bunny 3D aparece sobre tu cámara. No se graban fotos ni videos.</small></div></dialog>
+<dialog id="blog-reader-dialog" class="blog-reader" aria-labelledby="blog-reader-title">
+<div class="dialog-head"><span id="blog-reader-category" class="eyebrow"></span><button id="blog-reader-close" type="button" aria-label="Cerrar artículo">✕</button></div>
+<img loading="lazy" decoding="async" id="blog-reader-cover" alt="">
+<time id="blog-reader-date"></time>
+<h2 id="blog-reader-title"></h2>
+<div id="blog-reader-body" class="blog-reader-body"></div>
+<div class="blog-share-row" aria-label="Compartir este artículo"><span>¿Te gustó esta idea?</span><button id="blog-share-native" type="button">Compartir ↗</button><a id="blog-share-facebook" target="_blank" rel="noopener">Facebook ↗</a><a id="blog-share-whatsapp" target="_blank" rel="noopener">WhatsApp ↗</a><button id="blog-share-copy" type="button">Copiar enlace</button><span id="blog-share-status" role="status" aria-live="polite"></span></div>
+</dialog>
+<dialog id="blog-admin-auth" class="blog-auth" aria-labelledby="blog-auth-title">
+<div class="dialog-head"><div><span class="eyebrow">SOLO ADMINISTRADORA</span><h2 id="blog-auth-title">Acceder al dashboard</h2></div><button id="blog-auth-close" type="button" aria-label="Cerrar acceso de administradora">✕</button></div>
+<p id="blog-auth-intro">Ingresa tu contraseña para administrar las publicaciones guardadas en este dispositivo.</p>
+<form id="blog-auth-form">
+<label>Contraseña<input id="blog-admin-password" type="password" minlength="8" autocomplete="current-password" required></label>
+<label id="blog-password-confirm-wrap" hidden>Repite la contraseña<input id="blog-admin-password-confirm" type="password" minlength="8" autocomplete="new-password"></label>
+<button class="primary" type="submit">Entrar al dashboard</button>
+<p id="blog-auth-status" role="status"></p>
+</form>
+<p class="blog-auth-note">La contraseña no se guarda como texto: se conserva una huella criptográfica dentro de este navegador.</p>
+</dialog>
+<dialog id="cart">
+<div class="dialog-head">
+<h2>Tu bolsa mágica</h2>
+<button id="cart-close" aria-label="Cerrar bolsa">✕</button>
+</div>
+<div id="cart-items">
+</div>
+<p id="cart-total">
+</p>
+<p>Esta bolsa es una lista local. No se cobrarán pagos ni se enviarán pedidos.</p>
+<form id="payment-form" class="payment-form">
+<label for="payment-email">Correo para recibir el link de pago</label>
+<div class="payment-row"><input id="payment-email" name="email" type="email" autocomplete="email" placeholder="tu@email.com" required><button class="dark" type="submit">Solicitar link de pago</button></div>
+<p id="payment-result" class="form-result" role="status"></p>
+</form>
+<button id="cart-clear">Vaciar bolsa</button>
+</dialog>
+<dialog id="mail-club-dialog" class="community-dialog" aria-labelledby="mail-club-title">
+<div class="dialog-head"><div><span class="eyebrow">MAIL CLUB · CORREO FÍSICO</span><h2 id="mail-club-title">Un buzón para ti ♡</h2></div><button id="mail-club-close" type="button" aria-label="Cerrar formulario de cartas">✕</button></div>
+<p>Déjanos la dirección donde te gustaría recibir futuras cartas, stickers, recetas y detalles de MAROHE.</p>
+<form id="mail-club-form" class="community-form">
+<label>Nombre completo<input id="mail-name" name="name" autocomplete="name" maxlength="100" required></label>
+<label>Correo electrónico<input id="mail-email" name="email" type="email" autocomplete="email" maxlength="160" required></label>
+<label class="wide">Dirección física<input id="mail-address" name="address" autocomplete="street-address" maxlength="220" placeholder="Calle, número, departamento" required></label>
+<label>Ciudad<input id="mail-city" name="city" autocomplete="address-level2" maxlength="100" required></label>
+<label>Región o departamento<input id="mail-region" name="region" autocomplete="address-level1" maxlength="100" required></label>
+<label>Código postal <small>(opcional)</small><input id="mail-postal" name="postal" autocomplete="postal-code" maxlength="20"></label>
+<label>País<input id="mail-country" name="country" autocomplete="country-name" maxlength="80" value="Perú" required></label>
+<label class="wide">Referencia <small>(opcional)</small><textarea id="mail-reference" name="reference" rows="2" maxlength="300" placeholder="Una referencia útil para encontrar tu dirección"></textarea></label>
+<label class="community-consent wide"><input id="mail-consent" type="checkbox" required> Autorizo guardar estos datos en este dispositivo para mi solicitud del club de cartas.</label>
+<p class="privacy-note wide">Por ahora el formulario se guarda únicamente en este navegador y todavía no envía la dirección a MAROHE. No uses un equipo compartido si prefieres mantenerla privada.</p>
+<button class="primary wide" type="submit">Guardar mi solicitud ♡</button>
+<p id="mail-club-result" class="form-result wide" role="status"></p>
+</form>
+</dialog>
+<dialog id="install-help" aria-labelledby="install-help-heading">
+<div class="dialog-head">
+<h2 id="install-help-heading">Lleva tu universo contigo</h2>
+<button id="install-help-close" type="button" aria-label="Cerrar ayuda de instalación">✕</button>
+</div>
+<p id="install-help-message" role="status">Puedes instalar MAROHE desde el menú de tu navegador.</p>
+<ol class="install-steps">
+<li>
+<strong>En computadora o Android:</strong> busca «Instalar app» o «Añadir a la pantalla de inicio» en el menú del navegador.</li>
+<li>
+<strong>En iPhone o iPad:</strong> abre el menú Compartir y busca «Añadir a la pantalla de inicio».</li>
+<li>La opción depende del navegador. La instalación requiere abrir la web desde HTTPS o el servidor local; al abrir un archivo HTML directamente, puedes jugar pero no instalar.</li>
+</ol>
+<p class="install-offline">Una vez cargada, la app guarda sus juegos para volver a jugar sin conexión. El canal de YouTube necesita internet.</p>
+<button id="install-help-ok" type="button" class="primary">Entendido ♡</button>
+</dialog>
+
+<script src="app.js" defer>
+</script>
+<script src="projects.js" defer></script>
+<script src="city.js" defer>
+</script>
+<script src="puzzle-engines.js" defer>
+</script>
+<script src="puzzle-ui.js" defer>
+</script>
+<script src="boba-ui.js" defer>
+</script>
+<script src="universe.js" defer>
+</script>
+<script src="platform-engine.js" defer>
+</script>
+<script src="platform-ui.js" defer>
+</script>
+<script src="about-map.js" defer>
+</script>
+<script src="blog-media.js" defer></script>
+<script src="blog.js" defer>
+</script>
+<script src="ar-engine.js" defer></script>
+<script src="city-content.js" defer></script>
+<script src="vendor/leaflet/leaflet.js"></script>
+<script src="map-config.js"></script>
+<script src="city-map.js"></script>
+<script src="bunny-ar.js" defer></script>
+<script src="city-admin.js" defer></script>
+<script src="australia-engine.js" defer></script>
+<script src="peru-engine.js" defer></script>
+<script src="usa-engine.js" defer></script>
+<script src="combat-ui.js" defer></script>
+<script src="australia-ui.js" defer></script>
+<script src="peru-ui.js" defer></script>
+<script src="usa-ui.js" defer></script>
+<script src="arcade-input.js" defer></script>
+<script src="mobile-games.js" defer></script>
+<script src="play.js" defer></script>
+<script src="quiz.js" defer></script>
+</body>
+</html>
+

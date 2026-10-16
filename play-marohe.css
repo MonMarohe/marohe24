@@ -1,0 +1,64 @@
+/* Portrait challenge covers, shared with the Play navigation. */
+#play .play-retos{padding-top:0}
+#play .quiz-picker{display:grid;grid-template-columns:repeat(2,minmax(0,270px));gap:20px;width:min(100%,560px);margin-top:24px}
+#play .quiz-picker-copy{grid-column:1/-1}
+#play .quiz-picker-copy h3{font-size:24px;margin:0 0 8px}
+#play .quiz-picker-copy p{color:#c9b8d9;line-height:1.6;margin:0 0 6px}
+#play .quiz-cover{display:grid!important;grid-template-rows:auto minmax(0,1fr) auto auto;gap:10px;width:100%;height:auto;aspect-ratio:2/3;min-height:0!important;max-height:405px;margin:0!important;padding:22px!important;box-sizing:border-box;border-radius:16px!important;box-shadow:0 6px 0 #08050c;transition:transform .2s,box-shadow .2s}
+#play .quiz-cover:hover{transform:translateY(-4px);box-shadow:0 10px 0 #08050c}
+#play .quiz-cover:focus-visible{outline:3px solid #70dfd1;outline-offset:5px}
+#play .quiz-cover>.quiz-cover-kicker{font:700 9px/1.6 'Space Grotesk',sans-serif;letter-spacing:.12em;min-height:29px}
+#play .quiz-cover .quiz-cover-scene{width:100%;height:auto;min-height:0;position:relative}
+#play .quiz-cover-scene img{right:0;bottom:0;width:70%;height:85%;object-fit:contain;filter:drop-shadow(6px 7px 0 #2c17465e)}
+#play .quiz-cover .quiz-cover-symbol{left:0;top:5%;font-size:clamp(58px,8vw,96px);filter:drop-shadow(4px 6px 0 #2c17465e)}
+#play .quiz-cover .quiz-cover-detail{right:16%;bottom:29%;font-size:24px;letter-spacing:-.3em}
+#play .quiz-cover-arte .quiz-cover-detail{right:3%;top:11%;bottom:auto;font-size:29px;letter-spacing:.05em;color:#ffe394}
+#play .quiz-cover h3{display:flex;align-items:flex-end;min-height:2.04em;font:800 clamp(24px,3vw,35px)/1.02 'Space Grotesk',sans-serif;margin:0;letter-spacing:-.04em;text-shadow:0 2px 0 #432345;overflow-wrap:normal}
+#play .quiz-cover small{font:700 12px/1.5 'Space Grotesk',sans-serif;margin:0;color:#fff8fc}
+#play .quiz-card{box-sizing:border-box;width:100%}
+#play .quiz-options button{min-height:52px;overflow-wrap:anywhere}
+#play .quiz-card>button{min-height:48px}
+@media(max-width:700px){
+ #play .quiz-picker{gap:14px}
+ #play .quiz-cover{padding:14px!important;gap:7px;border-radius:13px!important}
+ #play .quiz-cover>.quiz-cover-kicker{font-size:8px;letter-spacing:.08em;min-height:26px}
+ #play .quiz-cover h3{font-size:clamp(21px,5.4vw,31px)}
+ #play .quiz-cover small{font-size:10px}
+ #play .quiz-cover .quiz-cover-symbol{font-size:clamp(44px,13vw,80px)}
+ #play .quiz-cover .quiz-cover-detail{font-size:18px;right:15%;bottom:29%}
+ #play .quiz-cover-arte .quiz-cover-detail{font-size:21px;right:0;bottom:auto}
+ #play .quiz-options{grid-template-columns:1fr}
+ #play .quiz-card{padding:20px 16px}
+}
+@media(max-width:340px){
+ #play .quiz-picker{grid-template-columns:minmax(0,240px);justify-content:center}
+ #play .quiz-picker-copy{grid-column:1}
+ #play .quiz-cover{padding:20px!important}
+ #play .quiz-cover h3{font-size:30px}
+ #play .quiz-cover .quiz-cover-symbol{font-size:80px}
+}
+
+/* Portrait roulette covers beside the existing Play experiences. */
+.roulette-picker{display:grid;grid-template-columns:repeat(2,minmax(0,310px));gap:24px;margin:28px 0 38px}
+.roulette-cover{position:relative;display:flex;flex-direction:column;min-width:0;min-height:455px;overflow:hidden;border:2px solid #856993;border-radius:20px;padding:24px;color:#21132b!important;box-shadow:0 7px 0 #09060e;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.roulette-cover-movies{background:linear-gradient(145deg,#ffb3d8,#d4b6f4 60%,#99e7e0)}
+.roulette-cover-restaurants{background:linear-gradient(145deg,#ffe69e,#d6e9ba 60%,#a1d6d0)}
+a.roulette-cover:hover{transform:translateY(-4px);box-shadow:0 11px 0 #09060e}
+a.roulette-cover:focus-visible{outline:3px solid #70dfd1;outline-offset:5px}
+.roulette-kicker{font:800 10px/1.5 Arial,sans-serif;letter-spacing:.12em}
+.roulette-cover-scene{position:relative;display:grid;place-items:center;min-height:210px;flex:1;padding:28px 6px}
+.mini-slot{position:relative;width:100%;max-width:212px;transform:rotate(-6deg);background:#33213f;border:3px solid #21132b;border-radius:15px;padding:10px;box-shadow:6px 7px 0 #21132b33;text-align:center}
+.mini-slot>span{display:block;font:800 10px/1.6 Arial,sans-serif;letter-spacing:.15em;color:#ffe7f8}
+.mini-slot>div{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:9px 0}
+.mini-slot i{display:grid;place-items:center;aspect-ratio:3/4;border:2px solid #21132b;border-radius:5px;background:linear-gradient(#fff2fb,#fff);color:#c34d93;font:900 31px/1 Arial,sans-serif;font-style:normal}
+.mini-slot i:nth-child(2){background:#ffe499;color:#523774}.mini-slot i:nth-child(3){color:#25827a}
+.mini-slot b{font:800 8px/1.5 Arial,sans-serif;letter-spacing:.07em;color:#fff0f8}
+.roulette-flower,.roulette-star{position:absolute;z-index:1;color:#f86bb4;-webkit-text-stroke:1.5px #21132b;paint-order:stroke fill;text-shadow:3px 4px #fff8;font:900 65px/1 Arial,sans-serif}
+.roulette-flower{top:0;left:-12px;transform:rotate(-15deg)}.roulette-star{right:-8px;bottom:8px;font-size:50px;color:#fff1a3}
+.roulette-cover h3{margin:12px 0 10px;font:800 clamp(28px,3vw,37px)/1.05 'Space Grotesk',Arial,sans-serif;letter-spacing:-.04em}
+.roulette-cover>p{margin:0 0 20px;font:500 13px/1.6 Arial,sans-serif}
+.roulette-card-action,.roulette-soon{align-self:flex-start;margin-top:auto;display:inline-flex;border:2px solid #21132b;border-radius:30px;padding:10px 16px;background:#30203d;color:#fff2fb;font:800 11px/1.4 Arial,sans-serif;letter-spacing:.03em}
+.roulette-soon{background:#fff8db;color:#483e30;letter-spacing:.1em}
+@media(max-width:700px){.roulette-picker{gap:15px}.roulette-cover{padding:17px;min-height:395px}.roulette-cover-scene{min-height:175px;padding:28px 0 20px}.mini-slot{padding:7px}.mini-slot i{font-size:25px}.roulette-cover h3{font-size:28px}.roulette-cover>p{font-size:12px}.roulette-flower{font-size:51px;left:-9px}.roulette-star{font-size:40px}.roulette-card-action,.roulette-soon{font-size:9px;padding:9px 11px}.mini-slot b{font-size:6px}}
+@media(max-width:440px){.roulette-picker{grid-template-columns:minmax(0,310px);justify-content:center}.roulette-cover{min-height:450px;padding:24px}.roulette-cover-scene{min-height:210px}.roulette-cover h3{font-size:36px}.roulette-cover>p{font-size:13px}.mini-slot{padding:10px}.mini-slot i{font-size:31px}.mini-slot b{font-size:8px}.roulette-card-action,.roulette-soon{font-size:11px;padding:10px 16px}}
+@media(prefers-reduced-motion:reduce){.roulette-cover{transition:none}}
